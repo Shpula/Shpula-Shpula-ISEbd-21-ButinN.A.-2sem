@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <Product Id="1">
+    <ProductName>Это Ноташа</ProductName>
+    <Price>322</Price>
+  </Product>
+</Products>

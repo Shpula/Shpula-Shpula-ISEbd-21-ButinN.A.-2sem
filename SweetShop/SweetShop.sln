@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetShopBusinessLogic", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetShopListImplement", "SweetShopListImplement\SweetShopListImplement.csproj", "{713DF280-7FAF-4D0B-BBC9-5A5CF0B715CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetShopFileImplement", "SweetShopFileImplement\SweetShopFileImplement.csproj", "{27E3A84D-68C2-483A-B084-3B84E9184EBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{713DF280-7FAF-4D0B-BBC9-5A5CF0B715CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{713DF280-7FAF-4D0B-BBC9-5A5CF0B715CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{713DF280-7FAF-4D0B-BBC9-5A5CF0B715CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E3A84D-68C2-483A-B084-3B84E9184EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E3A84D-68C2-483A-B084-3B84E9184EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E3A84D-68C2-483A-B084-3B84E9184EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E3A84D-68C2-483A-B084-3B84E9184EBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

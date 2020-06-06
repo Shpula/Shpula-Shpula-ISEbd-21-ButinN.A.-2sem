@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProductIngredients>
+  <ProductIngredient Id="1">
+    <ProductId>1</ProductId>
+    <IngredientId>4</IngredientId>
+    <Count>1</Count>
+  </ProductIngredient>
+  <ProductIngredient Id="2">
+    <ProductId>1</ProductId>
+    <IngredientId>2</IngredientId>
+    <Count>4</Count>
+  </ProductIngredient>
+</ProductIngredients>

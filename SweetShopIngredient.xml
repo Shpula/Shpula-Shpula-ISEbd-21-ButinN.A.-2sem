@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ingredients>
+  <Ingredient Id="1">
+    <IngredientName>Пиво</IngredientName>
+  </Ingredient>
+  <Ingredient Id="2">
+    <IngredientName>Кот</IngredientName>
+  </Ingredient>
+  <Ingredient Id="3">
+    <IngredientName>Аниме</IngredientName>
+  </Ingredient>
+  <Ingredient Id="4">
+    <IngredientName>Ноташа</IngredientName>
+  </Ingredient>
+</Ingredients>
