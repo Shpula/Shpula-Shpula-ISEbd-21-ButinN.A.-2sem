@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SweetShopBusinessLogic.BusinessLogics;
 using SweetShopBusinessLogic.Interfaces;
-using SweetShopFileImplement.Implements;
+using SweetShopDatabaseImplement.Implements;
 using Unity;
 using Unity.Lifetime;
 
@@ -27,7 +27,6 @@ namespace SweetShopView
         private static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();
-
             currentContainer.RegisterType<IIngredientLogic, IngredientLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<IOrderLogic, OrderLogic>(new
@@ -35,6 +34,8 @@ HierarchicalLifetimeManager());
             currentContainer.RegisterType<IProductLogic, ProductLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<MainLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ReportLogic>(new
+HierarchicalLifetimeManager());
             return currentContainer;
         }
     }

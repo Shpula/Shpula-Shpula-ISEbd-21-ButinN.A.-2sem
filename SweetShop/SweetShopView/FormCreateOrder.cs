@@ -44,14 +44,12 @@ namespace SweetShopView
         }
         private void CalcSum()
         {
-            if (comboBoxProduct.SelectedValue != null &&
-           !string.IsNullOrEmpty(textBoxCount.Text))
+            if (comboBoxProduct.SelectedValue != null && !string.IsNullOrEmpty(textBoxCount.Text))
             {
                 try
                 {
                     int id = Convert.ToInt32(comboBoxProduct.SelectedValue);
-                    ProductViewModel Product = logicB.Read(new ProductBindingModel
-                    { Id = id })?[0];
+                    ProductViewModel Product = logicB.Read(new ProductBindingModel { Id = id })?[0];
                     int count = Convert.ToInt32(textBoxCount.Text);
                     textBoxSum.Text = (count * Product.Price).ToString();
                 }
@@ -75,7 +73,7 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxCount.Text))
             {
-                MessageBox.Show("Заингредиентылните ингредиентыле Количество", "Ошибка",
+                MessageBox.Show("Заполните поле Количество", "Ошибка",
                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

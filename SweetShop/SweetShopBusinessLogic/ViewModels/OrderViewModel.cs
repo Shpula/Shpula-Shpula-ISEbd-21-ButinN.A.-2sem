@@ -10,7 +10,7 @@ namespace SweetShopBusinessLogic.ViewModels
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
-        [DisplayName("Продукт")]
+        [DisplayName("Пакет")]
         public string ProductName { get; set; }
         [DisplayName("Количество")]
         public int Count { get; set; }

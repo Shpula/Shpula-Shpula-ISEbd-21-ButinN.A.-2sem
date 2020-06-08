@@ -59,6 +59,7 @@ namespace SweetShopListImplement.Implements
             }
             throw new Exception("Элемент не найден");
         }
+
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             List<OrderViewModel> result = new List<OrderViewModel>();
@@ -66,7 +67,7 @@ namespace SweetShopListImplement.Implements
             {
                 if (model != null)
                 {
-                    if (Order.Id == model.Id)
+                    if (Order.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && Order.DateCreate >= model.DateFrom && Order.DateCreate <= model.DateTo))
                     {
                         result.Add(CreateViewModel(Order));
                         break;
@@ -77,6 +78,7 @@ namespace SweetShopListImplement.Implements
             }
             return result;
         }
+
         private Order CreateModel(OrderBindingModel model, Order Order)
         {
             Order.ProductId = model.ProductId == 0 ? Order.ProductId : model.ProductId;
@@ -87,6 +89,7 @@ namespace SweetShopListImplement.Implements
             Order.DateImplement = model.DateImplement;
             return Order;
         }
+
         private OrderViewModel CreateViewModel(Order Order)
         {
             string ProductName = "";

@@ -38,6 +38,7 @@ namespace SweetShopView
             this.buttonUpd = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonRef = new System.Windows.Forms.Button();
+            this.labelIngredient = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
@@ -56,44 +57,38 @@ namespace SweetShopView
             this.ID,
             this.ColumnIngredient,
             this.Count});
-            this.dataGridView.Location = new System.Drawing.Point(94, 162);
+            this.dataGridView.Location = new System.Drawing.Point(84, 130);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
-            this.dataGridView.RowHeadersWidth = 62;
             this.dataGridView.RowTemplate.Height = 28;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(546, 449);
+            this.dataGridView.Size = new System.Drawing.Size(485, 359);
             this.dataGridView.TabIndex = 2;
             // 
             // ID
             // 
             this.ID.HeaderText = "Id";
-            this.ID.MinimumWidth = 8;
             this.ID.Name = "ID";
             this.ID.Visible = false;
-            this.ID.Width = 150;
             // 
             // ColumnIngredient
             // 
-            this.ColumnIngredient.HeaderText = "Продукт";
-            this.ColumnIngredient.MinimumWidth = 8;
+            this.ColumnIngredient.HeaderText = "ПО";
             this.ColumnIngredient.Name = "ColumnIngredient";
-            this.ColumnIngredient.Width = 150;
             // 
             // Count
             // 
             this.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Count.HeaderText = "Количество";
-            this.Count.MinimumWidth = 8;
             this.Count.Name = "Count";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(688, 188);
+            this.buttonAdd.Location = new System.Drawing.Point(612, 150);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(173, 41);
+            this.buttonAdd.Size = new System.Drawing.Size(154, 33);
             this.buttonAdd.TabIndex = 6;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -101,10 +96,10 @@ namespace SweetShopView
             // 
             // buttonUpd
             // 
-            this.buttonUpd.Location = new System.Drawing.Point(688, 256);
+            this.buttonUpd.Location = new System.Drawing.Point(612, 205);
             this.buttonUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUpd.Name = "buttonUpd";
-            this.buttonUpd.Size = new System.Drawing.Size(173, 41);
+            this.buttonUpd.Size = new System.Drawing.Size(154, 33);
             this.buttonUpd.TabIndex = 5;
             this.buttonUpd.Text = "Изменить";
             this.buttonUpd.UseVisualStyleBackColor = true;
@@ -112,10 +107,10 @@ namespace SweetShopView
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(688, 328);
+            this.buttonDel.Location = new System.Drawing.Point(612, 262);
             this.buttonDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(173, 41);
+            this.buttonDel.Size = new System.Drawing.Size(154, 33);
             this.buttonDel.TabIndex = 4;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -123,21 +118,30 @@ namespace SweetShopView
             // 
             // buttonRef
             // 
-            this.buttonRef.Location = new System.Drawing.Point(688, 398);
+            this.buttonRef.Location = new System.Drawing.Point(612, 318);
             this.buttonRef.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRef.Name = "buttonRef";
-            this.buttonRef.Size = new System.Drawing.Size(173, 41);
+            this.buttonRef.Size = new System.Drawing.Size(154, 33);
             this.buttonRef.TabIndex = 3;
             this.buttonRef.Text = "Обновить";
             this.buttonRef.UseVisualStyleBackColor = true;
             this.buttonRef.Click += new System.EventHandler(this.buttonRef_Click);
             // 
+            // labelIngredient
+            // 
+            this.labelIngredient.AutoSize = true;
+            this.labelIngredient.Location = new System.Drawing.Point(85, 106);
+            this.labelIngredient.Name = "labelIngredient";
+            this.labelIngredient.Size = new System.Drawing.Size(29, 17);
+            this.labelIngredient.TabIndex = 7;
+            this.labelIngredient.Text = "ПО";
+            // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(705, 642);
+            this.buttonCancel.Location = new System.Drawing.Point(627, 514);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(158, 56);
+            this.buttonCancel.Size = new System.Drawing.Size(140, 45);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -145,10 +149,10 @@ namespace SweetShopView
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(522, 642);
+            this.buttonSave.Location = new System.Drawing.Point(464, 514);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(158, 56);
+            this.buttonSave.Size = new System.Drawing.Size(140, 45);
             this.buttonSave.TabIndex = 10;
             this.buttonSave.Text = "Сохранить";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -157,48 +161,49 @@ namespace SweetShopView
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(192, 31);
+            this.labelName.Location = new System.Drawing.Point(171, 25);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(83, 20);
+            this.labelName.Size = new System.Drawing.Size(72, 17);
             this.labelName.TabIndex = 9;
             this.labelName.Text = "Название";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(281, 31);
+            this.textBoxName.Location = new System.Drawing.Point(250, 25);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(360, 26);
+            this.textBoxName.Size = new System.Drawing.Size(320, 22);
             this.textBoxName.TabIndex = 8;
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(192, 85);
+            this.labelPrice.Location = new System.Drawing.Point(171, 68);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(48, 20);
+            this.labelPrice.Size = new System.Drawing.Size(43, 17);
             this.labelPrice.TabIndex = 13;
             this.labelPrice.Text = "Цена";
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(281, 82);
+            this.textBoxPrice.Location = new System.Drawing.Point(250, 66);
             this.textBoxPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(360, 26);
+            this.textBoxPrice.Size = new System.Drawing.Size(320, 22);
             this.textBoxPrice.TabIndex = 12;
             // 
             // FormProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 724);
+            this.ClientSize = new System.Drawing.Size(864, 579);
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.labelIngredient);
             this.Controls.Add(this.buttonRef);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonUpd);
@@ -206,7 +211,7 @@ namespace SweetShopView
             this.Controls.Add(this.dataGridView);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormProduct";
-            this.Text = "Продукт";
+            this.Text = "ПО";
             this.Load += new System.EventHandler(this.FormProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -220,6 +225,7 @@ namespace SweetShopView
         private System.Windows.Forms.Button buttonUpd;
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonRef;
+        private System.Windows.Forms.Label labelIngredient;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label labelName;

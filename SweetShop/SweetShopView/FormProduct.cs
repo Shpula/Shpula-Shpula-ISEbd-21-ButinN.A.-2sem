@@ -134,19 +134,19 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxName.Text))
             {
-                MessageBox.Show("Заингредиентылните название", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните название", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrEmpty(textBoxPrice.Text))
             {
-                MessageBox.Show("Заингредиентылните цену", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните цену", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
             if (ProductIngredients == null || ProductIngredients.Count == 0)
             {
-                MessageBox.Show("Заингредиентылните ингредиенты", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните ПО", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }

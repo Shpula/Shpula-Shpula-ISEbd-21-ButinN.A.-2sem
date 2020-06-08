@@ -72,9 +72,9 @@
             this.labelIngredient.AutoSize = true;
             this.labelIngredient.Location = new System.Drawing.Point(48, 31);
             this.labelIngredient.Name = "labelIngredient";
-            this.labelIngredient.Size = new System.Drawing.Size(116, 20);
+            this.labelIngredient.Size = new System.Drawing.Size(53, 20);
             this.labelIngredient.TabIndex = 10;
-            this.labelIngredient.Text = "Ингредиенты ";
+            this.labelIngredient.Text = "ПО";
             // 
             // labelSum
             // 
@@ -128,7 +128,6 @@
             this.Load += new System.EventHandler(this.FormCreateOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

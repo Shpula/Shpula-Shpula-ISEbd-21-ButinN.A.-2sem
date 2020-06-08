@@ -79,15 +79,15 @@
             this.comboBoxIngredient.Name = "comboBoxIngredient";
             this.comboBoxIngredient.Size = new System.Drawing.Size(358, 28);
             this.comboBoxIngredient.TabIndex = 8;
-            // 
+            //
             // labelIngredient
             // 
             this.labelIngredient.AutoSize = true;
             this.labelIngredient.Location = new System.Drawing.Point(24, 25);
             this.labelIngredient.Name = "labelIngredient";
-            this.labelIngredient.Size = new System.Drawing.Size(101, 20);
+            this.labelIngredient.Size = new System.Drawing.Size(65, 20);
             this.labelIngredient.TabIndex = 5;
-            this.labelIngredient.Text = "Ингредиент";
+            this.labelIngredient.Text = "ПО";
             // 
             // FormProductIngredient
             // 
@@ -101,10 +101,9 @@
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.textBoxCount);
             this.Name = "FormProductIngredient";
-            this.Text = "Ингредиенты продуктов";
+            this.Text = "Пакеты по";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

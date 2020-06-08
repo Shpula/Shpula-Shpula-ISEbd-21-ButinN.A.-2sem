@@ -5,9 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using SweetShopBusinessLogic.ViewModels;
-using SweetShopFileImplement;
 using SweetShopFileImplement.Models;
-using System.Xml.Linq;
 
 namespace SweetShopFileImplement.Implements
 {
@@ -59,11 +57,11 @@ namespace SweetShopFileImplement.Implements
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             return source.Orders
-            .Where(rec => model == null || rec.Id == model.Id)
+            .Where(rec => model == null || rec.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && rec.DateCreate >= model.DateFrom && rec.DateCreate <= model.DateTo))
             .Select(rec => new OrderViewModel
             {
                 Id = rec.Id,
-                ProductName = GetProductName(rec.ProductId),
+                ProductName = source.Products.FirstOrDefault(x => x.Id == rec.ProductId)?.ProductName,
                 Count = rec.Count,
                 Sum = rec.Sum,
                 Status = rec.Status,
@@ -71,14 +69,6 @@ namespace SweetShopFileImplement.Implements
                 DateImplement = rec.DateImplement
             })
             .ToList();
-        }
-
-        private string GetProductName(int id)
-        {
-            string name = "";
-            var Product = source.Products.FirstOrDefault(x => x.Id == id);
-            name = Product != null ? Product.ProductName : "";
-            return name;
         }
     }
 }

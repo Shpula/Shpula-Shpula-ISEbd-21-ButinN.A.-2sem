@@ -12,7 +12,7 @@ namespace SweetShopFileImplement
     public class FileDataListSingleton
     {
         private static FileDataListSingleton instance;
-        private readonly string IngredientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\SweetShopIngredient.xml";
+        private readonly string IngredientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Ingredient.xml";
         private readonly string OrderFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Order.xml";
         private readonly string ProductFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Product.xml";
         private readonly string ProductIngredientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\ProductIngredient.xml";

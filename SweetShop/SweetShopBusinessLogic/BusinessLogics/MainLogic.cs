@@ -48,7 +48,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 Sum = order.Sum,
                 DateCreate = order.DateCreate,
                 DateImplement = DateTime.Now,
-                Status = OrderStatus.Выингредиентылняется
+                Status = OrderStatus.Выполняется
             });
         }
 
@@ -62,9 +62,9 @@ namespace SweetShopBusinessLogic.BusinessLogics
             {
                 throw new Exception("Не найден заказ");
             }
-            if (order.Status != OrderStatus.Выингредиентылняется)
+            if (order.Status != OrderStatus.Выполняется)
             {
-                throw new Exception("Заказ не в статусе \"Выингредиентылняется\"");
+                throw new Exception("Заказ не в статусе \"Выполняется\"");
             }
             orderLogic.CreateOrUpdate(new OrderBindingModel
             {

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.ComponentModel;
 
 namespace SweetShopBusinessLogic.ViewModels
 {
-    public class IngredientViewModel
+    public class ReportProductIngredientViewModel
     {
-        public int Id { get; set; }
-        [DisplayName("Название ингредиента")]
+        public string ProductName { get; set; }
         public string IngredientName { get; set; }
+        public int Count { get; set; }
     }
 }

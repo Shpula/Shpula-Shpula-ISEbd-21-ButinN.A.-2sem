@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -96,6 +99,42 @@
     <Reference Include="Microsoft.Identity.Client, Version=3.0.8.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Identity.Client.3.0.8\lib\net45\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.DocumentObjectModel, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc.1.50.5147\lib\net20\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc.1.50.5147\lib\net20\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc.1.50.5147\lib\net20\MigraDoc.RtfRendering.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-MigraDoc.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -117,6 +156,14 @@
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -145,6 +192,7 @@
     <Reference Include="Unity.Container, Version=5.11.8.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.11.7\lib\net47\Unity.Container.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormCreateOrder.cs">
@@ -152,18 +200,6 @@
     </Compile>
     <Compile Include="FormCreateOrder.Designer.cs">
       <DependentUpon>FormCreateOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormIngredient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormIngredient.Designer.cs">
-      <DependentUpon>FormIngredient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormIngredients.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormIngredients.Designer.cs">
-      <DependentUpon>FormIngredients.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -177,40 +213,47 @@
     <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductIngredient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductIngredient.Designer.cs">
-      <DependentUpon>FormProductIngredient.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormProducts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormProducts.Designer.cs">
       <DependentUpon>FormProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProductIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductIngredient.Designer.cs">
+      <DependentUpon>FormProductIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportOrders.Designer.cs">
+      <DependentUpon>FormReportOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportProductIngredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportProductIngredients.Designer.cs">
+      <DependentUpon>FormReportProductIngredients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngredient.Designer.cs">
+      <DependentUpon>FormIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngredients.Designer.cs">
+      <DependentUpon>FormIngredients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCreateOrder.resx">
-      <DependentUpon>FormCreateOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormIngredient.resx">
-      <DependentUpon>FormIngredient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormIngredients.resx">
-      <DependentUpon>FormIngredients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProduct.resx">
-      <DependentUpon>FormProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductIngredient.resx">
-      <DependentUpon>FormProductIngredient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProducts.resx">
-      <DependentUpon>FormProducts.cs</DependentUpon>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormReportProductIngredients.resx">
+      <DependentUpon>FormReportProductIngredients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -221,7 +264,239 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportProductIngredients.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Axis.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.AxisTitle.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Chart.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.ChartFrame.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.ChartObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.DataLabel.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.DocumentObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.DocumentObjectCollection.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.FillFormat.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Font.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Gridlines.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Legend.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.LineFormat.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.PlotArea.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Point.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.Series.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.SeriesCollection.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.SeriesElements.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.TickLabels.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.XSeries.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.XSeriesElements.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.XValue.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Charting.XValues.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.BarCode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.Code2of5Interleaved.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.Code3of9Standard.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.CodeBase.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.CodeDataMatrix.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.CodeOmr.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.MatrixCode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.BarCodes.ThickThinBarCode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.Layout.XTextFormatter.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XBitmapDecoder.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XBitmapEncoder.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XBitmapImage.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XBitmapSource.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XBrush.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XBrushes.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XColor.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XColorResourceManager.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XColors.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XFont.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XFontFamily.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XFontMetrics.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XForm.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphics+SpaceTransformer.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphics+XGraphicsInternals.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphics.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphicsContainer.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphicsPath.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphicsPathInternals.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XGraphicsState.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XImage.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XImageFormat.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XLinearGradientBrush.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XMatrix.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XPdfFontOptions.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XPdfForm.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XPen.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XPens.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XPoint.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XPrivateFontCollection.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XRect.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XSize.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XSolidBrush.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XStringFormat.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XStringFormats.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XUnit.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Drawing.XVector.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Fonts.FontResolverInfo.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Fonts.GlobalFontSettings.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Fonts.IFontResolver.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Fonts.PlatformFontResolver.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Internal.DebugBreak.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Internal.FontsDevHelper.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.PageSizeConverter.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfAcroField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfAcroField+PdfAcroFieldCollection.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfAcroField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfAcroForm+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfAcroForm.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfButtonField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfButtonField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfCheckBoxField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfCheckBoxField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfChoiceField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfChoiceField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfComboBoxField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfComboBoxField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfGenericField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfGenericField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfListBoxField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfListBoxField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfPushButtonField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfPushButtonField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfRadioButtonField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfRadioButtonField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfSignatureField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfSignatureField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfTextField+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.AcroForms.PdfTextField.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Actions.PdfAction.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Actions.PdfGoToAction.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfCatalog.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfContent.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfContents.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfDictionaryWithContentStream+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfDictionaryWithContentStream.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfExtGState.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfExtGStateTable.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfFont+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfFont.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfFontDescriptor+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfFontDescriptor.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfFormXObject+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfFormXObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfGroupAttributes+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfGroupAttributes.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfImage+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfImage.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfInternals.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfObjectInternals.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfObjectStream+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfObjectStream.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfReference.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfResources+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfResources.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfResourceTable.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfShading.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfShadingPattern.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfSoftMask+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfSoftMask.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfTilingPattern.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfTransparencyGroupAttributes+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfTransparencyGroupAttributes.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfXObject+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Advanced.PdfXObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Annotations.PdfAnnotation+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Annotations.PdfAnnotation.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Annotations.PdfAnnotations.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Annotations.PdfLinkAnnotation.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Annotations.PdfRubberStampAnnotation.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Annotations.PdfTextAnnotation.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.CLexer.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.ContentReader.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.ContentReaderException.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.CParser.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CArray.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CComment.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CInteger.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CName.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CNumber.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.COperator.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CReal.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CSequence.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.CString.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.OpCode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Content.Objects.OpCodes.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.Ascii85Decode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.AsciiHexDecode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.Filter.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.Filtering.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.FilterParms.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.FlateDecode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Filters.LzwDecode.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Internal.AnsiEncoding.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Internal.RawEncoding.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.IO.Chars.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.IO.Lexer.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.IO.PdfPasswordProvider.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.IO.PdfPasswordProviderArgs.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.IO.PdfReader.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.IO.PdfReaderException.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.KeysBase.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfArray+ArrayElements.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfArray.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfBoolean.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfBooleanObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfCustomValue.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfCustomValues.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDate.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDictionary+DictionaryElements.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDictionary+PdfStream+Keys.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDictionary+PdfStream.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDictionary.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDocument.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDocumentInformation.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDocumentOptions.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfDocumentSettings.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfInteger.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfIntegerObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfItem.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfLiteral.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfName+PdfXNameComparer.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfName.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfNameObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfNull.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfNullObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfNumber.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfNumberObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfObjectID.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfOutline.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfOutlineCollection.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfPage.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfPages.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfReal.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfRealObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfRectangle.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfString.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfStringObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfUInteger.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfUIntegerObject.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.PdfViewerPreferences.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Security.PdfSecurityHandler.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Security.PdfSecuritySettings.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.Security.PdfStandardSecurityHandler.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.Pdf.TrimMargins.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.PdfSharpException.datasource" />
+    <None Include="Properties\DataSources\PdfSharp.ProductVersionInfo.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Implements.IngredientLogic.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Implements.OrderLogic.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Implements.ProductLogic.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Migrations.InitialCreate.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Migrations.NewUpdate.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Models.Ingredient.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Models.Order.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Models.Product.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.Models.ProductIngredient.datasource" />
+    <None Include="Properties\DataSources\SweetShopDatabaseImplement.SweetShopDatabase.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -255,6 +530,13 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.0.19235.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

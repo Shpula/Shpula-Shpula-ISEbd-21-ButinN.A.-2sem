@@ -45,16 +45,27 @@ namespace SweetShopDatabaseImplement.Implements
         {
             using (var context = new SweetShopDatabase())
             {
-                Order element = context.Orders.FirstOrDefault(rec => rec.Id ==
-               model.Id);
-                if (element != null)
+                using (var transaction = context.Database.BeginTransaction())
                 {
-                    context.Orders.Remove(element);
-                    context.SaveChanges();
-                }
-                else
-                {
-                    throw new Exception("Элемент не найден");
+                    try
+                    {
+                        Order order = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
+                        if (order != null)
+                        {
+                            context.Orders.Remove(order);
+                        }
+                        else
+                        {
+                            throw new Exception("Элемент не найден");
+                        }
+                        context.SaveChanges();
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
                 }
             }
         }
@@ -63,19 +74,20 @@ namespace SweetShopDatabaseImplement.Implements
         {
             using (var context = new SweetShopDatabase())
             {
-                return context.Orders
-                .Include(rec => rec.Product)
-            .Where(rec => model == null || rec.Id == model.Id)
-            .Select(rec => new OrderViewModel
-            {
-                Id = rec.Id,
-                ProductName = rec.Product.ProductName,
-                Count = rec.Count,
-                Sum = rec.Sum,
-                Status = rec.Status,
-                DateCreate = rec.DateCreate,
-                DateImplement = rec.DateImplement
-            })
+                return context.Orders.Where(rec => model == null ||
+                     (rec.Id == model.Id && model.Id.HasValue) ||
+                     (model.DateFrom.HasValue && model.DateTo.HasValue &&
+                     (rec.DateCreate >= model.DateFrom) && (rec.DateCreate <= model.DateTo))).ToList().Select(rec => new OrderViewModel()
+                 {
+                         Id = rec.Id,
+                         ProductId = rec.ProductId,
+                         ProductName = context.Products.FirstOrDefault((r) => r.Id == rec.ProductId).ProductName,
+                         Count = rec.Count,
+                         DateCreate = rec.DateCreate,
+                         DateImplement = rec.DateImplement,
+                         Status = rec.Status,
+                         Sum = rec.Sum
+                     })
             .ToList();
             }
         }
