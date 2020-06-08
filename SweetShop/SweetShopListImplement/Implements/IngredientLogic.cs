@@ -26,7 +26,7 @@ namespace SweetShopListImplement.Implements
                 if (Ingredient.IngredientName == model.IngredientName && Ingredient.Id !=
                model.Id)
                 {
-                    throw new Exception("Уже есть по с таким названием");
+                    throw new Exception("Уже есть Ингредиент с таким названием");
                 }
                 if (!model.Id.HasValue && Ingredient.Id >= tempIngredient.Id)
                 {

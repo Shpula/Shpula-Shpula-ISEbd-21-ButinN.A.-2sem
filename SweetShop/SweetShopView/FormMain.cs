@@ -54,12 +54,12 @@ namespace SweetShopView
             LoadData();
         }
 
-        private void поToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ингредиентToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormIngredients>();
             form.ShowDialog();
         }
-        private void пакетыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void продуктыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormProducts>();
             form.ShowDialog();
@@ -139,7 +139,7 @@ namespace SweetShopView
                     {
                         FileName = dialog.FileName
                     });
-                    MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
+                    MessageBox.Show("Выингредиентлнено", "Успех", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
             }

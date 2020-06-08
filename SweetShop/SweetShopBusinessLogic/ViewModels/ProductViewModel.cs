@@ -8,7 +8,7 @@ namespace SweetShopBusinessLogic.ViewModels
     public class ProductViewModel
     {
         public int Id { get; set; }
-        [DisplayName("Название пакета")]
+        [DisplayName("Название Продукта")]
         public string ProductName { get; set; }
         [DisplayName("Цена")]
         public decimal Price { get; set; }

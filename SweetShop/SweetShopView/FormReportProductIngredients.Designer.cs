@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ReportProductIngredientViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -40,17 +40,17 @@
             // 
             // ReportProductIngredientViewModelBindingSource
             // 
-            this.ReportProductIngredientViewModelBindingSource.DataSource = typeof(SweetShopBusinessLogic.ViewModels.ReportProductIngredientViewModel);
+            this.ReportProductIngredientViewModelBindingSource.DataSource = typeof(SweetShopBusinessLogic.ViewModels.ReportProductIngredientsViewModel);
             // 
             // reportViewer
             // 
-            reportDataSource2.Name = "DataSetAD";
-            reportDataSource2.Value = this.ReportProductIngredientViewModelBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSetAD";
+            reportDataSource1.Value = this.ReportProductIngredientViewModelBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "SweetShopView.ReportProductIngredients.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(18, 42);
             this.reportViewer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.Name = "ReportProductIngredients";
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(1409, 644);
             this.reportViewer.TabIndex = 0;
@@ -100,7 +100,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormReportProductIngredients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Детали пакетов";
+            this.Text = "Детали Продуктов";
             this.Load += new System.EventHandler(this.FormReportProductIngredients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReportProductIngredientViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);

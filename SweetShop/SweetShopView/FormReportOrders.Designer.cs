@@ -70,7 +70,7 @@
             // 
             this.ProductColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ProductColumn.FillWeight = 200F;
-            this.ProductColumn.HeaderText = "Название пакета";
+            this.ProductColumn.HeaderText = "Название Продукта";
             this.ProductColumn.Name = "ProductColumn";
             this.ProductColumn.ReadOnly = true;
             // 
@@ -111,7 +111,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "ПО";
+            this.label2.Text = "Ингредиент";
             // 
             // buttonMake
             // 
@@ -147,7 +147,7 @@
             this.Controls.Add(this.dataGridView);
             this.Name = "FormReportOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Заказы по датам";
+            this.Text = "Заказы Ингредиент датам";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

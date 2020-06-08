@@ -87,7 +87,7 @@
             this.labelIngredient.Name = "labelIngredient";
             this.labelIngredient.Size = new System.Drawing.Size(65, 20);
             this.labelIngredient.TabIndex = 5;
-            this.labelIngredient.Text = "ПО";
+            this.labelIngredient.Text = "Ингредиент";
             // 
             // FormProductIngredient
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.textBoxCount);
             this.Name = "FormProductIngredient";
-            this.Text = "Пакеты по";
+            this.Text = "Продукты Ингредиент";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

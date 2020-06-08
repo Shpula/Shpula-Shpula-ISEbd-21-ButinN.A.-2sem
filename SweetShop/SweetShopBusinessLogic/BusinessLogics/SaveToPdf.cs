@@ -27,7 +27,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 CreateRow(new PdfRowParameters
                 {
                     Table = table,
-                    Texts = new List<string> { "Пакет", "ПО", "Количество" },
+                    Texts = new List<string> { "Продукт", "Ингредиент", "Количество" },
                     Style = "NormalTitle",
                     ParagraphAlignment = ParagraphAlignment.Center
                 });
@@ -45,8 +45,8 @@ namespace SweetShopBusinessLogic.BusinessLogics
                         ParagraphAlignment = ParagraphAlignment.Left
                     });
                 }
-                PdfDocumentRenderer renderer = new PdfDocumentRenderer(true,
-                    PdfSharp.Pdf.PdfFontEmbedding.Always)
+            PdfDocumentRenderer renderer = new PdfDocumentRenderer(true,
+                PdfSharp.Pdf.PdfFontEmbedding.Always)
                 {
                     Document = document
                 };

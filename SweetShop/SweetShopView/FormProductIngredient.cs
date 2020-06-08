@@ -47,13 +47,13 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxCount.Text))
             {
-                MessageBox.Show("Заполните поле Количество", "Ошибка",
+                MessageBox.Show("ЗаИнгредиентлните Ингредиентле Количество", "Ошибка",
                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (comboBoxIngredient.SelectedValue == null)
             {
-                MessageBox.Show("Выберите ПО", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Выберите Ингредиент", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }

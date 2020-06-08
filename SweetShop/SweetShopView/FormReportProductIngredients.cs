@@ -30,7 +30,7 @@ namespace SweetShopView
         {
             try
             {
-                var dataSource = logic.GetProductIngredient();
+                var dataSource = logic.GetProductIngredients();
                 ReportDataSource source = new ReportDataSource("DataSetAD", dataSource);
                 reportViewer.LocalReport.DataSources.Add(source);
                 reportViewer.RefreshReport();
@@ -54,7 +54,7 @@ namespace SweetShopView
                         {
                             FileName = dialog.FileName,
                         });
-                        MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
+                        MessageBox.Show("Выингредиентлнено", "Успех", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
                     catch (Exception ex)

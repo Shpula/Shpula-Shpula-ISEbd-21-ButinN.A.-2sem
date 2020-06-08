@@ -43,7 +43,7 @@ namespace SweetShopView
                             DateFrom = dateTimePickerFrom.Value.Date,
                             DateTo = dateTimePickerTo.Value.Date,
                         });
-                        MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
+                        MessageBox.Show("ВыИнгредиентлнено", "Успех", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
