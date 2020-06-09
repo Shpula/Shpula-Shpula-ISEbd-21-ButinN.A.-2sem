@@ -94,7 +94,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
             SaveToPdf.CreateDoc(new PDFInfo
             {
                 FileName = model.FileName,
-                Title = "Детализация Продуктов ",
+                Title = "Ингредиенты Продуктов ",
                 ProductIngredients = GetProductIngredients()
             });
         }
