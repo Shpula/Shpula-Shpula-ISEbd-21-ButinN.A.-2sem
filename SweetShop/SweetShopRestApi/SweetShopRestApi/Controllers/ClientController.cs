@@ -7,7 +7,7 @@ using SweetShopBusinessLogic.BindingModels;
 using SweetShopBusinessLogic.Interfaces;
 using SweetShopBusinessLogic.ViewModels;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// For more information on enabling Web API for empty projects, visit https://go.microingredient.com/fwlink/?LinkID=397860
 
 namespace SweetShopRestApi.Controllers
 {

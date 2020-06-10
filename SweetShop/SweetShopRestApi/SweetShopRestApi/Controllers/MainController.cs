@@ -9,7 +9,7 @@ using SweetShopBusinessLogic.Interfaces;
 using SweetShopBusinessLogic.ViewModels;
 using SweetShopRestApi.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// For more information on enabling Web API for empty projects, visit https://go.microingredient.com/fwlink/?LinkID=397860
 
 namespace SweetShopRestApi.Controllers
 {
@@ -18,19 +18,19 @@ namespace SweetShopRestApi.Controllers
     public class MainController : ControllerBase
     {
         private readonly IOrderLogic _order;
-        private readonly IProductLogic _pack;
+        private readonly IProductLogic _product;
         private readonly MainLogic _main;
-        public MainController(IOrderLogic order, IProductLogic pack, MainLogic main)
+        public MainController(IOrderLogic order, IProductLogic product, MainLogic main)
         {
             _order = order;
-            _pack = pack;
+            _product = product;
             _main = main;
         }
         [HttpGet]
-        public List<ProductModel> GetProductList() => _pack.Read(null)?.Select(rec => Convert(rec)).ToList();
+        public List<ProductModel> GetProductList() => _product.Read(null)?.Select(rec => Convert(rec)).ToList();
         [HttpGet]
-        public ProductModel GetProduct(int packId) => Convert(_pack.Read(new ProductBindingModel
-        { Id = packId })?[0]);
+        public ProductModel GetProduct(int productId) => Convert(_product.Read(new ProductBindingModel
+        { Id = productId })?[0]);
         [HttpGet]
         public List<OrderViewModel> GetOrders(int clientId) => _order.Read(new OrderBindingModel
         { ClientId = clientId });

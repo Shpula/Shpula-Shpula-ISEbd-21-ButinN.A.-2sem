@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SweetShopFileImplement", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SweetShopDatabaseImplement", "SweetShopDatabaseImplement\SweetShopDatabaseImplement.csproj", "{59D14EFB-C526-4EE8-A742-82B3F0D7783C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetShopRestApi", "SweetShopRestApi\SweetShopRestApi\SweetShopRestApi.csproj", "{DF8355A9-8BF5-4447-808A-3871279E786B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SweetShopRestApi", "SweetShopRestApi\SweetShopRestApi\SweetShopRestApi.csproj", "{DF8355A9-8BF5-4447-808A-3871279E786B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetShopClientView", "SweetShopClientView\SweetShopClientView.csproj", "{9E5AE9AB-3ADD-4A76-9E57-7DAF28139510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DF8355A9-8BF5-4447-808A-3871279E786B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF8355A9-8BF5-4447-808A-3871279E786B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF8355A9-8BF5-4447-808A-3871279E786B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5AE9AB-3ADD-4A76-9E57-7DAF28139510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5AE9AB-3ADD-4A76-9E57-7DAF28139510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5AE9AB-3ADD-4A76-9E57-7DAF28139510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5AE9AB-3ADD-4A76-9E57-7DAF28139510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

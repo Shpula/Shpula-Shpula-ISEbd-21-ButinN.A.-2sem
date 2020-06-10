@@ -14,7 +14,7 @@ namespace SweetShopView
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для ингредиентиложения.
+        /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()
@@ -29,13 +29,15 @@ namespace SweetShopView
             var currentContainer = new UnityContainer();
             currentContainer.RegisterType<IIngredientLogic, IngredientLogic>(new
            HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IOrderLogic, OrderLogic>(new
-HierarchicalLifetimeManager());
             currentContainer.RegisterType<IProductLogic, ProductLogic>(new
+           HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IOrderLogic, OrderLogic>(new
+           HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IClientLogic, ClientLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<MainLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<ReportLogic>(new
-HierarchicalLifetimeManager());
+           HierarchicalLifetimeManager());
             return currentContainer;
         }
     }

@@ -39,7 +39,8 @@ namespace SweetShopView
                     dataGridView.DataSource = list;
                     dataGridView.Columns[0].Visible = false;
                     dataGridView.Columns[1].Visible = false;
-                    dataGridView.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dataGridView.Columns[3].Visible = false;
+                    dataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
             catch (Exception ex)
@@ -54,12 +55,12 @@ namespace SweetShopView
             LoadData();
         }
 
-        private void ингредиентToolStripMenuItem_Click(object sender, EventArgs e)
+        private void поToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormIngredients>();
             form.ShowDialog();
         }
-        private void продуктыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void пакетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormProducts>();
             form.ShowDialog();
@@ -129,7 +130,7 @@ namespace SweetShopView
             LoadData();
         }
 
-        private void packsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
             {
@@ -139,7 +140,7 @@ namespace SweetShopView
                     {
                         FileName = dialog.FileName
                     });
-                    MessageBox.Show("Выингредиентлнено", "Успех", MessageBoxButtons.OK,
+                    MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
             }
@@ -151,9 +152,15 @@ namespace SweetShopView
             form.ShowDialog();
         }
 
-        private void packIngredientsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void productIngredientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormReportProductIngredients>();
+            form.ShowDialog();
+        }
+
+        private void клиентыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormClients>();
             form.ShowDialog();
         }
     }
