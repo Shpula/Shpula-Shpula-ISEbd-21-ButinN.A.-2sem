@@ -40,7 +40,7 @@
             // 
             // ReportProductIngredientViewModelBindingSource
             // 
-            this.ReportProductIngredientViewModelBindingSource.DataSource = typeof(SweetShopBusinessLogic.ViewModels.ReportProductIngredientsViewModel);
+            this.ReportProductIngredientViewModelBindingSource.DataSource = typeof(SweetShopBusinessLogic.ViewModels.ReportProductIngredientViewModel);
             // 
             // reportViewer
             // 

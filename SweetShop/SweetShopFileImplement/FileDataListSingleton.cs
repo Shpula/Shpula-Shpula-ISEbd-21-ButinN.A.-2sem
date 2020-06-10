@@ -16,16 +16,19 @@ namespace SweetShopFileImplement
         private readonly string OrderFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Order.xml";
         private readonly string ProductFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Product.xml";
         private readonly string ProductIngredientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\ProductIngredient.xml";
+        private readonly string ClientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Client.xml";
         public List<Ingredient> Ingredients { get; set; }
         public List<Order> Orders { get; set; }
         public List<Product> Products { get; set; }
         public List<ProductIngredient> ProductIngredients { get; set; }
+        public List<Client> Clients { get; set; }
         private FileDataListSingleton()
         {
             Ingredients = LoadIngredients();
             Orders = LoadOrders();
             Products = LoadProducts();
             ProductIngredients = LoadProductIngredients();
+            Clients = LoadClients();
         }
         public static FileDataListSingleton GetInstance()
         {
@@ -41,6 +44,27 @@ namespace SweetShopFileImplement
             SaveOrders();
             SaveProducts();
             SaveProductIngredients();
+            SaveClients();
+        }
+        private List<Client> LoadClients()
+        {
+            var list = new List<Client>();
+            if (File.Exists(ClientFileName))
+            {
+                XDocument xDocument = XDocument.Load(ClientFileName);
+                var xElements = xDocument.Root.Elements("Client").ToList();
+                foreach (var elem in xElements)
+                {
+                    list.Add(new Client
+                    {
+                        Id = Convert.ToInt32(elem.Attribute("Id").Value),
+                        ClientFIO = elem.Element("ClientFIO").Value,
+                        Email = elem.Element("Email").Value,
+                        Password = elem.Element("Password").Value
+                    });
+                }
+            }
+            return list;
         }
         private List<Ingredient> LoadIngredients()
         {
@@ -75,6 +99,7 @@ namespace SweetShopFileImplement
                         ProductId = Convert.ToInt32(elem.Element("ProductId").Value),
                         Count = Convert.ToInt32(elem.Element("Count").Value),
                         Sum = Convert.ToDecimal(elem.Element("Sum").Value),
+                        ClientId = Convert.ToInt32(elem.Element("ClientId").Value),
                         Status = (OrderStatus)Enum.Parse(typeof(OrderStatus),
                    elem.Element("Status").Value),
                         DateCreate =
@@ -126,6 +151,25 @@ namespace SweetShopFileImplement
             }
             return list;
         }
+        private void SaveClients()
+        {
+            if (Clients != null)
+            {
+                var xElement = new XElement("Clients");
+
+                foreach (var client in Clients)
+                {
+                    xElement.Add(new XElement("Client",
+                    new XAttribute("Id", client.Id),
+                    new XElement("ClientFIO", client.ClientFIO),
+                    new XElement("Email", client.Email),
+                    new XElement("Password", client.Password)));
+                }
+
+                XDocument xDocument = new XDocument(xElement);
+                xDocument.Save(ClientFileName);
+            }
+        }
         private void SaveIngredients()
         {
             if (Ingredients != null)
@@ -151,6 +195,7 @@ namespace SweetShopFileImplement
                     xElement.Add(new XElement("Order",
                     new XAttribute("Id", order.Id),
                     new XElement("ProductId", order.ProductId),
+                    new XElement("ClientId", order.ClientId),
                     new XElement("Count", order.Count),
                     new XElement("Sum", order.Sum),
                     new XElement("Status", order.Status),

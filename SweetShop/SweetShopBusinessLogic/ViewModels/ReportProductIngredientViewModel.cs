@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SweetShopBusinessLogic.ViewModels
 {
-    public class ReportProductIngredientsViewModel
+    public class ReportProductIngredientViewModel
     {
         public string ProductName { get; set; }
         public string IngredientName { get; set; }

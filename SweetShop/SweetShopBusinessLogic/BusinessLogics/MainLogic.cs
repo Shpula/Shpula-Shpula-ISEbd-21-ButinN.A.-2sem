@@ -19,10 +19,11 @@ namespace SweetShopBusinessLogic.BusinessLogics
             orderLogic.CreateOrUpdate(new OrderBindingModel
             {
                 ProductId = model.ProductId,
+                ClientId = model.ClientId,
                 Count = model.Count,
                 Sum = model.Sum,
                 DateCreate = DateTime.Now,
-                Status = OrderStatus.принят
+                Status = OrderStatus.Принят
             });
         }
 
@@ -36,19 +37,20 @@ namespace SweetShopBusinessLogic.BusinessLogics
             {
                 throw new Exception("Не найден заказ");
             }
-            if (order.Status != OrderStatus.принят)
+            if (order.Status != OrderStatus.Принят)
             {
-                throw new Exception("Заказ не в статусе \"принят\"");
+                throw new Exception("Заказ не в статусе \"Принят\"");
             }
             orderLogic.CreateOrUpdate(new OrderBindingModel
             {
                 Id = order.Id,
+                ClientId = order.ClientId,
                 ProductId = order.ProductId,
                 Count = order.Count,
                 Sum = order.Sum,
                 DateCreate = order.DateCreate,
                 DateImplement = DateTime.Now,
-                Status = OrderStatus.ВыИнгредиентлняется
+                Status = OrderStatus.Выполняется
             });
         }
 
@@ -62,13 +64,14 @@ namespace SweetShopBusinessLogic.BusinessLogics
             {
                 throw new Exception("Не найден заказ");
             }
-            if (order.Status != OrderStatus.ВыИнгредиентлняется)
+            if (order.Status != OrderStatus.Выполняется)
             {
-                throw new Exception("Заказ не в статусе \"ВыИнгредиентлняется\"");
+                throw new Exception("Заказ не в статусе \"Выполняется\"");
             }
             orderLogic.CreateOrUpdate(new OrderBindingModel
             {
                 Id = order.Id,
+                ClientId = order.ClientId,
                 ProductId = order.ProductId,
                 Count = order.Count,
                 Sum = order.Sum,
@@ -94,6 +97,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
             orderLogic.CreateOrUpdate(new OrderBindingModel
             {
                 Id = order.Id,
+                ClientId = order.ClientId,
                 ProductId = order.ProductId,
                 Count = order.Count,
                 Sum = order.Sum,

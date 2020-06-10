@@ -11,54 +11,55 @@ namespace SweetShopBusinessLogic.BusinessLogics
 {
     public class ReportLogic
     {
-        private readonly IIngredientLogic ingredientLogic;
-        private readonly IProductLogic productLogic;
+        private readonly IIngredientLogic softLogic;
+        private readonly IProductLogic packLogic;
         private readonly IOrderLogic orderLogic;
-        public ReportLogic(IProductLogic productLogic, IIngredientLogic ingredientLogic,
+        public ReportLogic(IProductLogic packLogic, IIngredientLogic softLogic,
             IOrderLogic orderLogic)
         {
-            this.ingredientLogic = ingredientLogic;
-            this.productLogic = productLogic;
+            this.softLogic = softLogic;
+            this.packLogic = packLogic;
             this.orderLogic = orderLogic;
         }
-        public List<ReportProductIngredientsViewModel> GetProductIngredients()
+
+        public List<ReportProductIngredientViewModel> GetProductIngredient()
         {
-            var products = productLogic.Read(null);
-            var list = new List<ReportProductIngredientsViewModel>();
-            foreach (var product in products)
+            var packs = packLogic.Read(null);
+            var list = new List<ReportProductIngredientViewModel>();
+            foreach (var pack in packs)
             {
-                foreach (var pi in product.ProductIngredients)
+                foreach (var ps in pack.ProductIngredients)
                 {
-                    var record = new ReportProductIngredientsViewModel
+                    var record = new ReportProductIngredientViewModel
                     {
-                        ProductName = product.ProductName,
-                        IngredientName = pi.Value.Item1,
-                        Count = pi.Value.Item2
+                        ProductName = pack.ProductName,
+                        IngredientName = ps.Value.Item1,
+                        Count = ps.Value.Item2
                     };
                     list.Add(record);
                 }
             }
-
             return list;
         }
 
         public List<IGrouping<DateTime, OrderViewModel>> GetOrders(ReportBindingModel model)
-        {         
+        {
             var list = orderLogic
             .Read(new OrderBindingModel
             {
                 DateFrom = model.DateFrom,
                 DateTo = model.DateTo
-            })          
+
+            })
             .GroupBy(rec => rec.DateCreate.Date)
-            .OrderBy(recc => recc.Key)
+            .OrderBy(recG => recG.Key)
             .ToList();
 
             return list;
         }
 
         /// <summary>
-        /// Сохранение комингредиентнент в файл-Word
+        /// Сохранение компонент в файл-Word
         /// </summary>
         /// <param name="model"></param>
         public void SaveProductsToWordFile(ReportBindingModel model)
@@ -66,19 +67,20 @@ namespace SweetShopBusinessLogic.BusinessLogics
             SaveToWord.CreateDoc(new WordInfo
             {
                 FileName = model.FileName,
-                Title = "Список Продуктов",
-                Products = productLogic.Read(null)
+                Title = "Список пакетов",
+                Products = packLogic.Read(null)
             });
         }
 
         /// <summary>
-        /// Сохранение закусок с указаеним Продуктов в файл-Excel
+        /// Сохранение закусок с указаеним продуктов в файл-Excel
         /// </summary>
         /// <param name="model"></param>
         public void SaveOrdersToExcelFile(ReportBindingModel model)
         {
             SaveToExcel.CreateDoc(new ExcelInfo
-            {              
+            {
+
                 FileName = model.FileName,
                 Title = "Список заказов",
                 Orders = GetOrders(model)
@@ -86,7 +88,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
         }
 
         /// <summary>
-        /// Сохранение закусок с Продуктами в файл-Pdf
+        /// Сохранение закусок с продуктами в файл-Pdf
         /// </summary>
         /// <param name="model"></param>
         public void SaveProductIngredientsToPdfFile(ReportBindingModel model)
@@ -94,8 +96,8 @@ namespace SweetShopBusinessLogic.BusinessLogics
             SaveToPdf.CreateDoc(new PDFInfo
             {
                 FileName = model.FileName,
-                Title = "Детализация Продуктов ",
-                ProductIngredients = GetProductIngredients()
+                Title = "Детализация пакетов ",
+                ProductIngredients = GetProductIngredient()
             });
         }
     }

@@ -22,7 +22,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 WorkbookPart workbookpart = spreadsheetDocument.AddWorkbookPart();
                 workbookpart.Workbook = new Workbook();
                 CreateStyles(workbookpart);
-                // Ингредиентлучаем/создаем хранилище текстов для книги
+                // Получаем/создаем хранилище текстов для книги
                 SharedStringTablePart shareStringPart =
                 spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().Count() > 0
                 ?
@@ -62,7 +62,8 @@ namespace SweetShopBusinessLogic.BusinessLogics
                     CellFromName = "A1",
                     CellToName = "E1"
                 });
-                uint rowIndex = 2;             
+
+                uint rowIndex = 2;
                 foreach (var date in info.Orders)
                 {
                     decimal generalSum = 0;
@@ -76,8 +77,8 @@ namespace SweetShopBusinessLogic.BusinessLogics
                         StyleIndex = 0U
                     });
                     rowIndex++;
-
-                    foreach (var order in date) { 
+                    foreach (var order in date)
+                    {
                         InsertCellInWorksheet(new ExcelCellParameters
                         {
                             Worksheet = worksheetPart.Worksheet,
@@ -327,8 +328,8 @@ namespace SweetShopBusinessLogic.BusinessLogics
             }
             else
             {
-                // Все ячейки должны быть Ингредиентследовательно друг за другом расИнгредиентложены
-                // нужно оингредиентеделить, Ингредиентсле какой вставлять
+                // Все ячейки должны быть последовательно друг за другом расположены
+                // нужно определить, после какой вставлять
                 Cell refCell = null;
                 foreach (Cell rowCell in row.Elements<Cell>())
                 {

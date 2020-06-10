@@ -67,7 +67,8 @@ namespace SweetShopListImplement.Implements
             {
                 if (model != null)
                 {
-                    if (Order.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && Order.DateCreate >= model.DateFrom && Order.DateCreate <= model.DateTo))
+                    if (Order.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && Order.DateCreate >= model.DateFrom && Order.DateCreate <= model.DateTo)
+                        || model.ClientId.HasValue && Order.ClientId == model.ClientId)
                     {
                         result.Add(CreateViewModel(Order));
                         break;
@@ -82,6 +83,7 @@ namespace SweetShopListImplement.Implements
         private Order CreateModel(OrderBindingModel model, Order Order)
         {
             Order.ProductId = model.ProductId == 0 ? Order.ProductId : model.ProductId;
+            Order.ClientId = (int)model.ClientId;
             Order.Count = model.Count;
             Order.Sum = model.Sum;
             Order.Status = model.Status;
@@ -105,6 +107,7 @@ namespace SweetShopListImplement.Implements
             {
                 Id = Order.Id,
                 ProductName = ProductName,
+                ClientId = Order.ClientId,
                 Count = Order.Count,
                 Sum = Order.Sum,
                 Status = Order.Status,

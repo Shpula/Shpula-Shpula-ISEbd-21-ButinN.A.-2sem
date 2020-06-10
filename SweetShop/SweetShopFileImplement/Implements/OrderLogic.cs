@@ -35,6 +35,7 @@ namespace SweetShopFileImplement.Implements
                 source.Orders.Add(element);
             }
             element.ProductId = model.ProductId == 0 ? element.ProductId : model.ProductId;
+            element.ClientId = model.ClientId == null ? element.ClientId : (int)model.ClientId;
             element.Count = model.Count;
             element.Sum = model.Sum;
             element.Status = model.Status;
@@ -57,11 +58,14 @@ namespace SweetShopFileImplement.Implements
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             return source.Orders
-            .Where(rec => model == null || rec.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && rec.DateCreate >= model.DateFrom && rec.DateCreate <= model.DateTo))
+           .Where(rec => model == null || rec.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && rec.DateCreate >= model.DateFrom && rec.DateCreate <= model.DateTo)
+            || model.ClientId.HasValue && rec.ClientId == model.ClientId)
             .Select(rec => new OrderViewModel
             {
                 Id = rec.Id,
                 ProductName = source.Products.FirstOrDefault(x => x.Id == rec.ProductId)?.ProductName,
+                ClientId = rec.ClientId,
+                ClientFIO = source.Clients.FirstOrDefault(recC => recC.Id == rec.ClientId)?.ClientFIO,
                 Count = rec.Count,
                 Sum = rec.Sum,
                 Status = rec.Status,
@@ -69,6 +73,14 @@ namespace SweetShopFileImplement.Implements
                 DateImplement = rec.DateImplement
             })
             .ToList();
+        }
+
+        private string GetProductName(int id)
+        {
+            string name = "";
+            var Product = source.Products.FirstOrDefault(x => x.Id == id);
+            name = Product != null ? Product.ProductName : "";
+            return name;
         }
     }
 }

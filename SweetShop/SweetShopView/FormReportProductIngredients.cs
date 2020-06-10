@@ -1,7 +1,6 @@
 ﻿using Microsoft.Reporting.WinForms;
 using SweetShopBusinessLogic.BindingModels;
 using SweetShopBusinessLogic.BusinessLogics;
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +29,7 @@ namespace SweetShopView
         {
             try
             {
-                var dataSource = logic.GetProductIngredients();
+                var dataSource = logic.GetProductIngredient();
                 ReportDataSource source = new ReportDataSource("DataSetAD", dataSource);
                 reportViewer.LocalReport.DataSources.Add(source);
                 reportViewer.RefreshReport();
