@@ -8,7 +8,7 @@
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Освободить все исингредиентльзуемые ресурсы.
         /// </summary>
         /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
@@ -23,24 +23,24 @@
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Требуемый метод для ингредиентддержки конструктора — не изменяйте 
+        /// содержимое этого метода с ингредиентмощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пакетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ингредиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.продуктыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.исингредиентлнителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderDatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productIngredientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductIngredientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запускРаботToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonCreateOrder = new System.Windows.Forms.Button();
-            this.buttonTakeOrderInWork = new System.Windows.Forms.Button();
-            this.buttonOrderReady = new System.Windows.Forms.Button();
             this.buttonPayOrder = new System.Windows.Forms.Button();
             this.buttonRef = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
@@ -49,128 +49,131 @@
             // 
             // menuStrip
             // 
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.справочникиToolStripMenuItem,
-            this.reportsToolStripMenuItem});
+            this.reportsToolStripMenuItem,
+            this.запускРаботToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(918, 24);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1285, 33);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
             // справочникиToolStripMenuItem
             // 
             this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поToolStripMenuItem,
-            this.пакетыToolStripMenuItem,
-            this.клиентыToolStripMenuItem});
+            this.ингредиентToolStripMenuItem,
+            this.продуктыToolStripMenuItem,
+            this.клиентыToolStripMenuItem,
+            this.исингредиентлнителиToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
-            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
             this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
-            // поToolStripMenuItem
+            // ингредиентToolStripMenuItem
             // 
-            this.поToolStripMenuItem.Name = "поToolStripMenuItem";
-            this.поToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.поToolStripMenuItem.Text = "Ингредиент";
-            this.поToolStripMenuItem.Click += new System.EventHandler(this.поToolStripMenuItem_Click);
+            this.ингредиентToolStripMenuItem.Name = "ингредиентToolStripMenuItem";
+            this.ингредиентToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.ингредиентToolStripMenuItem.Text = "ингредиент";
+            this.ингредиентToolStripMenuItem.Click += new System.EventHandler(this.ингредиентToolStripMenuItem_Click);
             // 
-            // пакетыToolStripMenuItem
+            // продуктыToolStripMenuItem
             // 
-            this.пакетыToolStripMenuItem.Name = "продуктыToolStripMenuItem";
-            this.пакетыToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.пакетыToolStripMenuItem.Text = "продукты";
-            this.пакетыToolStripMenuItem.Click += new System.EventHandler(this.пакетыToolStripMenuItem_Click);
+            this.продуктыToolStripMenuItem.Name = "продуктыToolStripMenuItem";
+            this.продуктыToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.продуктыToolStripMenuItem.Text = "продукты";
+            this.продуктыToolStripMenuItem.Click += new System.EventHandler(this.продуктыToolStripMenuItem_Click);
             // 
             // клиентыToolStripMenuItem
             // 
             this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
-            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
             this.клиентыToolStripMenuItem.Text = "Клиенты";
             this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click);
+            // 
+            // исингредиентлнителиToolStripMenuItem
+            // 
+            this.исингредиентлнителиToolStripMenuItem.Name = "исингредиентлнителиToolStripMenuItem";
+            this.исингредиентлнителиToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.исингредиентлнителиToolStripMenuItem.Text = "Работяги";
+            this.исингредиентлнителиToolStripMenuItem.Click += new System.EventHandler(this.исингредиентлнителиToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productsToolStripMenuItem,
+            this.ProductsToolStripMenuItem,
             this.orderDatesToolStripMenuItem,
-            this.productIngredientsToolStripMenuItem});
+            this.ProductIngredientsToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.reportsToolStripMenuItem.Text = "Отчеты";
             // 
-            // productsToolStripMenuItem
+            // ProductsToolStripMenuItem
             // 
-            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productsToolStripMenuItem.Text = "Список пакетов";
-            this.productsToolStripMenuItem.Click += new System.EventHandler(this.productsToolStripMenuItem_Click);
-            // 
-            // productIngredientsToolStripMenuItem
-            // 
-            this.productIngredientsToolStripMenuItem.Name = "productIngredientsToolStripMenuItem";
-            this.productIngredientsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productIngredientsToolStripMenuItem.Text = "Детали пакетов";
-            this.productIngredientsToolStripMenuItem.Click += new System.EventHandler(this.productIngredientsToolStripMenuItem_Click);
+            this.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem";
+            this.ProductsToolStripMenuItem.Size = new System.Drawing.Size(323, 34);
+            this.ProductsToolStripMenuItem.Text = "Список продуктов";
+            this.ProductsToolStripMenuItem.Click += new System.EventHandler(this.ProductsToolStripMenuItem_Click);
             // 
             // orderDatesToolStripMenuItem
             // 
             this.orderDatesToolStripMenuItem.Name = "orderDatesToolStripMenuItem";
-            this.orderDatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.orderDatesToolStripMenuItem.Text = "Заказы по датам";
+            this.orderDatesToolStripMenuItem.Size = new System.Drawing.Size(323, 34);
+            this.orderDatesToolStripMenuItem.Text = "Заказы ингредиент датам";
             this.orderDatesToolStripMenuItem.Click += new System.EventHandler(this.orderDatesToolStripMenuItem_Click);
-            //           
+            // 
+            // ProductIngredientsToolStripMenuItem
+            // 
+            this.ProductIngredientsToolStripMenuItem.Name = "ProductIngredientsToolStripMenuItem";
+            this.ProductIngredientsToolStripMenuItem.Size = new System.Drawing.Size(323, 34);
+            this.ProductIngredientsToolStripMenuItem.Text = "Детали продуктов";
+            this.ProductIngredientsToolStripMenuItem.Click += new System.EventHandler(this.ProductIngredientsToolStripMenuItem_Click);
+            // 
+            // запускРаботToolStripMenuItem
+            // 
+            this.запускРаботToolStripMenuItem.Name = "запускРаботToolStripMenuItem";
+            this.запускРаботToolStripMenuItem.Size = new System.Drawing.Size(136, 29);
+            this.запускРаботToolStripMenuItem.Text = "Запуск работ";
+            this.запускРаботToolStripMenuItem.Click += new System.EventHandler(this.запускРаботToolStripMenuItem_Click);
+            // 
             // dataGridView
             // 
-            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.RowTemplate.Height = 28;
             this.dataGridView.AllowUserToResizeRows = false;
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.Location = new System.Drawing.Point(0, 27);
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(0, 41);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 28;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(702, 421);
+            this.dataGridView.Size = new System.Drawing.Size(1053, 648);
             this.dataGridView.TabIndex = 1;
             // 
             // buttonCreateOrder
             // 
-            this.buttonCreateOrder.Location = new System.Drawing.Point(779, 43);
+            this.buttonCreateOrder.Location = new System.Drawing.Point(1061, 112);
+            this.buttonCreateOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCreateOrder.Name = "buttonCreateOrder";
-            this.buttonCreateOrder.Size = new System.Drawing.Size(142, 29);
+            this.buttonCreateOrder.Size = new System.Drawing.Size(213, 45);
             this.buttonCreateOrder.TabIndex = 2;
             this.buttonCreateOrder.Text = "Создать заказ";
             this.buttonCreateOrder.UseVisualStyleBackColor = true;
             this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
             // 
-            // buttonTakeOrderInWork
-            // 
-            this.buttonTakeOrderInWork.Location = new System.Drawing.Point(779, 91);
-            this.buttonTakeOrderInWork.Name = "buttonTakeOrderInWork";
-            this.buttonTakeOrderInWork.Size = new System.Drawing.Size(141, 29);
-            this.buttonTakeOrderInWork.TabIndex = 3;
-            this.buttonTakeOrderInWork.Text = "Отдать на выполнение";
-            this.buttonTakeOrderInWork.UseVisualStyleBackColor = true;
-            this.buttonTakeOrderInWork.Click += new System.EventHandler(this.buttonTakeOrderInWork_Click);
-            // 
-            // buttonOrderReady
-            // 
-            this.buttonOrderReady.Location = new System.Drawing.Point(779, 138);
-            this.buttonOrderReady.Name = "buttonOrderReady";
-            this.buttonOrderReady.Size = new System.Drawing.Size(141, 28);
-            this.buttonOrderReady.TabIndex = 4;
-            this.buttonOrderReady.Text = "Заказ готов";
-            this.buttonOrderReady.UseVisualStyleBackColor = true;
-            this.buttonOrderReady.Click += new System.EventHandler(this.buttonOrderReady_Click);
-            // 
             // buttonPayOrder
             // 
-            this.buttonPayOrder.Location = new System.Drawing.Point(779, 183);
+            this.buttonPayOrder.Location = new System.Drawing.Point(1062, 432);
+            this.buttonPayOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonPayOrder.Name = "buttonPayOrder";
-            this.buttonPayOrder.Size = new System.Drawing.Size(139, 29);
+            this.buttonPayOrder.Size = new System.Drawing.Size(208, 45);
             this.buttonPayOrder.TabIndex = 5;
             this.buttonPayOrder.Text = "Заказ оплачен";
             this.buttonPayOrder.UseVisualStyleBackColor = true;
@@ -178,9 +181,10 @@
             // 
             // buttonRef
             // 
-            this.buttonRef.Location = new System.Drawing.Point(779, 230);
+            this.buttonRef.Location = new System.Drawing.Point(1066, 532);
+            this.buttonRef.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRef.Name = "buttonRef";
-            this.buttonRef.Size = new System.Drawing.Size(138, 27);
+            this.buttonRef.Size = new System.Drawing.Size(207, 41);
             this.buttonRef.TabIndex = 6;
             this.buttonRef.Text = "Обновить";
             this.buttonRef.UseVisualStyleBackColor = true;
@@ -188,44 +192,44 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 450);
+            this.ClientSize = new System.Drawing.Size(1285, 692);
             this.Controls.Add(this.buttonRef);
             this.Controls.Add(this.buttonPayOrder);
-            this.Controls.Add(this.buttonOrderReady);
-            this.Controls.Add(this.buttonTakeOrderInWork);
             this.Controls.Add(this.buttonCreateOrder);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Магазин ПО";
+            this.Text = "Магазин ингредиент";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem пакетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ингредиентToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem продуктыToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonCreateOrder;
-        private System.Windows.Forms.Button buttonTakeOrderInWork;
-        private System.Windows.Forms.Button buttonOrderReady;
         private System.Windows.Forms.Button buttonPayOrder;
         private System.Windows.Forms.Button buttonRef;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productIngredientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ProductsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ProductIngredientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderDatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem исингредиентлнителиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запускРаботToolStripMenuItem;
     }
 }

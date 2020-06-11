@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SweetShopBusinessLogic.BindingModels;
+using SweetShopBusinessLogic.Enums;
 using SweetShopBusinessLogic.Interfaces;
 using SweetShopBusinessLogic.ViewModels;
 using SweetShopListImplement;
@@ -68,7 +69,9 @@ namespace SweetShopListImplement.Implements
                 if (model != null)
                 {
                     if (Order.Id == model.Id || (model.DateFrom.HasValue && model.DateTo.HasValue && Order.DateCreate >= model.DateFrom && Order.DateCreate <= model.DateTo)
-                        || model.ClientId.HasValue && Order.ClientId == model.ClientId)
+                        || model.ClientId.HasValue && Order.ClientId == model.ClientId
+                        || model.FreeOrders.HasValue && model.FreeOrders.Value
+                    || model.ImplementerId.HasValue && Order.ImplementerId == model.ImplementerId && Order.Status == OrderStatus.Выполняется)
                     {
                         result.Add(CreateViewModel(Order));
                         break;
@@ -85,6 +88,7 @@ namespace SweetShopListImplement.Implements
             Order.ProductId = model.ProductId == 0 ? Order.ProductId : model.ProductId;
             Order.ClientId = (int)model.ClientId;
             Order.Count = model.Count;
+            Order.ImplementerId = model.ImplementerId;
             Order.Sum = model.Sum;
             Order.Status = model.Status;
             Order.DateCreate = model.DateCreate;
