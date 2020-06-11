@@ -18,13 +18,14 @@ namespace SweetShopFileImplement
         private readonly string ProductIngredientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\ProductIngredient.xml";
         private readonly string ClientFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Client.xml";
         private readonly string ImplementerFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\Implementer.xml";
-
+        private readonly string MessageInfoFileName = "C:\\Users\\MiNotebook\\source\\repos\\Shpula-Shpula-ISEbd-21-ButinN.A.-2sem\\MessageInfo.xml";
         public List<Ingredient> Ingredients { get; set; }
         public List<Order> Orders { get; set; }
         public List<Product> Products { get; set; }
         public List<ProductIngredient> ProductIngredients { get; set; }
         public List<Client> Clients { get; set; }
         public List<Implementer> Implementers { get; set; }
+        public List<MessageInfo> MessageInfoes { get; set; }
         private FileDataListSingleton()
         {
             Ingredients = LoadIngredients();
@@ -33,6 +34,7 @@ namespace SweetShopFileImplement
             ProductIngredients = LoadProductIngredients();
             Clients = LoadClients();
             Implementers = LoadImplementers();
+            MessageInfoes = LoadMessageInfoes();
         }
         public static FileDataListSingleton GetInstance()
         {
@@ -50,6 +52,30 @@ namespace SweetShopFileImplement
             SaveProductIngredients();
             SaveClients();
             SaveImplementers();
+            SaveMessageInfoes();
+        }
+
+        private List<MessageInfo> LoadMessageInfoes()
+        {
+            var list = new List<MessageInfo>();
+            if (File.Exists(MessageInfoFileName))
+            {
+                XDocument xDocument = XDocument.Load(MessageInfoFileName);
+                var xElements = xDocument.Root.Elements("MessageInfo").ToList();
+                foreach (var elem in xElements)
+                {
+                    list.Add(new MessageInfo
+                    {
+                        MessageId = elem.Attribute("MessageId").Value,
+                        ClientId = Convert.ToInt32(elem.Element("ClientId").Value),
+                        SenderName = elem.Element("SenderName").Value,
+                        DateDelivery = Convert.ToDateTime(elem.Element("DateDelivery").Value),
+                        Subject = elem.Element("Subject").Value,
+                        Body = elem.Element("Body").Value
+                    });
+                }
+            }
+            return list;
         }
         private List<Implementer> LoadImplementers()
         {
@@ -177,7 +203,29 @@ namespace SweetShopFileImplement
             }
             return list;
         }
-        private void SaveImplementers()
+
+        private void SaveMessageInfoes()
+        {
+            if (MessageInfoes != null)
+            {
+                var xElement = new XElement("MessageInfoes");
+
+                foreach (var messageInfo in MessageInfoes)
+                {
+                    xElement.Add(new XElement("MessageInfo",
+                    new XAttribute("Id", messageInfo.MessageId),
+                    new XElement("ClientId", messageInfo.ClientId),
+                    new XElement("SenderName", messageInfo.SenderName),
+                    new XElement("DateDelivery", messageInfo.DateDelivery),
+                    new XElement("Subject", messageInfo.Subject),
+                    new XElement("Body", messageInfo.Body)));
+                }
+
+                XDocument xDocument = new XDocument(xElement);
+                xDocument.Save(MessageInfoFileName);
+            }
+        }
+            private void SaveImplementers()
         {
             if (Implementers != null)
             {

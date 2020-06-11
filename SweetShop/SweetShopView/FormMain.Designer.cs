@@ -34,6 +34,7 @@
             this.продуктыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.исингредиентлнителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сообщенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderDatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +69,8 @@
             this.ингредиентToolStripMenuItem,
             this.продуктыToolStripMenuItem,
             this.клиентыToolStripMenuItem,
-            this.исингредиентлнителиToolStripMenuItem});
+            this.исингредиентлнителиToolStripMenuItem,
+            this.сообщенияToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
             this.справочникиToolStripMenuItem.Text = "Справочники";
@@ -76,30 +78,37 @@
             // ингредиентToolStripMenuItem
             // 
             this.ингредиентToolStripMenuItem.Name = "ингредиентToolStripMenuItem";
-            this.ингредиентToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.ингредиентToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.ингредиентToolStripMenuItem.Text = "ингредиент";
             this.ингредиентToolStripMenuItem.Click += new System.EventHandler(this.ингредиентToolStripMenuItem_Click);
             // 
             // продуктыToolStripMenuItem
             // 
             this.продуктыToolStripMenuItem.Name = "продуктыToolStripMenuItem";
-            this.продуктыToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.продуктыToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.продуктыToolStripMenuItem.Text = "продукты";
             this.продуктыToolStripMenuItem.Click += new System.EventHandler(this.продуктыToolStripMenuItem_Click);
             // 
             // клиентыToolStripMenuItem
             // 
             this.клиентыToolStripMenuItem.Name = "клиентыToolStripMenuItem";
-            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.клиентыToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.клиентыToolStripMenuItem.Text = "Клиенты";
             this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click);
             // 
             // исингредиентлнителиToolStripMenuItem
             // 
             this.исингредиентлнителиToolStripMenuItem.Name = "исингредиентлнителиToolStripMenuItem";
-            this.исингредиентлнителиToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.исингредиентлнителиToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.исингредиентлнителиToolStripMenuItem.Text = "Работяги";
             this.исингредиентлнителиToolStripMenuItem.Click += new System.EventHandler(this.исингредиентлнителиToolStripMenuItem_Click);
+            // 
+            // сообщенияToolStripMenuItem
+            // 
+            this.сообщенияToolStripMenuItem.Name = "сообщенияToolStripMenuItem";
+            this.сообщенияToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.сообщенияToolStripMenuItem.Text = "Сообщения";
+            this.сообщенияToolStripMenuItem.Click += new System.EventHandler(this.сообщенияToolStripMenuItem_Click_1);
             // 
             // reportsToolStripMenuItem
             // 
@@ -231,5 +240,6 @@
         private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem исингредиентлнителиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запускРаботToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сообщенияToolStripMenuItem;
     }
 }
