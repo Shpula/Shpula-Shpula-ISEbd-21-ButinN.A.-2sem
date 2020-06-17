@@ -69,7 +69,6 @@ namespace SweetShopListImplement.Implements
         {
             Product.ProductName = model.ProductName;
             Product.Price = model.Price;
-            //обновляем существуюущее полеы и ищем максимальный идентификатор
             int maxPCId = 0;
             for (int i = 0; i < source.ProductIngredients.Count; ++i)
             {

@@ -8,7 +8,7 @@
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Освободить все исингредиентыльзуемые ресурсы.
         /// </summary>
         /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
@@ -23,14 +23,14 @@
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Требуемый метод для ингредиентыддержки конструктора — не изменяйте 
+        /// содержимое этого метода с ингредиентымощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.полеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ингредиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.продуктыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.исполнителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,17 +68,16 @@
             this.полеToolStripMenuItem,
             this.продуктыToolStripMenuItem,
             this.клиентыToolStripMenuItem,
-            this.исполнителиToolStripMenuItem});
-            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
+            this.исполнителиToolStripMenuItem});s.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
             this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
-            // полеToolStripMenuItem
+            // ингредиентыToolStripMenuItem
             // 
-            this.полеToolStripMenuItem.Name = "полеToolStripMenuItem";
-            this.полеToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
-            this.полеToolStripMenuItem.Text = "поле";
-            this.полеToolStripMenuItem.Click += new System.EventHandler(this.полеToolStripMenuItem_Click);
+            this.ингредиентыToolStripMenuItem.Name = "полеToolStripMenuItem";
+            this.ингредиентыToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.ингредиентыToolStripMenuItem.Text = "ингредиенты";
+            this.ингредиентыToolStripMenuItem.Click += new System.EventHandler(this.полеToolStripMenuItem_Click);
             // 
             // продуктыToolStripMenuItem
             // 
@@ -204,7 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Магазин полеов";
+            this.Text = "Магазин ингредиентов";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -218,7 +217,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem полеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ингредиентыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem продуктыToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonCreateOrder;

@@ -58,8 +58,7 @@ namespace SweetShopView
         {
             LoadData();
         }
-
-        private void полеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ингредиентыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormIngredients>();
             form.ShowDialog();

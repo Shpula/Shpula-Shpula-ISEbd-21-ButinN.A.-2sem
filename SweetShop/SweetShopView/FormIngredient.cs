@@ -49,7 +49,7 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxName.Text))
             {
-                MessageBox.Show("Зполните название", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните название", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }

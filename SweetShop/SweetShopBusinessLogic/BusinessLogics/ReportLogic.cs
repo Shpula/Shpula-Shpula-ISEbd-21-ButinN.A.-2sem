@@ -98,6 +98,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 FileName = model.FileName,
                 Title = "Детализация продуктов ",
                 ProductIngredients = GetProductIngredient()
+
             });
         }
     }
