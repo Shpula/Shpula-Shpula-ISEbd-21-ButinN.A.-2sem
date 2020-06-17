@@ -24,7 +24,7 @@ namespace SweetShopDatabaseImplement.Implements
                        rec.ProductName == model.ProductName && rec.Id != model.Id);
                         if (element != null)
                         {
-                            throw new Exception("Уже есть пакет с таким названием");
+                            throw new Exception("Уже есть продукт с таким названием");
                         }
                         if (model.Id.HasValue)
                         {
