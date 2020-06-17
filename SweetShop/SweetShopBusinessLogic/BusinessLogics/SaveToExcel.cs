@@ -22,7 +22,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 WorkbookPart workbookpart = spreadsheetDocument.AddWorkbookPart();
                 workbookpart.Workbook = new Workbook();
                 CreateStyles(workbookpart);
-                // Ингредиентлучаем/создаем хранилище текстов для книги
+                // прлучаем/создаем хранилище текстов для книги
                 SharedStringTablePart shareStringPart =
                 spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().Count() > 0
                 ?
@@ -327,8 +327,8 @@ namespace SweetShopBusinessLogic.BusinessLogics
             }
             else
             {
-                // Все ячейки должны быть Ингредиентследовательно друг за другом расИнгредиентложены
-                // нужно оингредиентеделить, Ингредиентсле какой вставлять
+                // Все ячейки должны быть прследовательно друг за другом распрложены
+                // нужно определить, прсле какой вставлять
                 Cell refCell = null;
                 foreach (Cell rowCell in row.Elements<Cell>())
                 {

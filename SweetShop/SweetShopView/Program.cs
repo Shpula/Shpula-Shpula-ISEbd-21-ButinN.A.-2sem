@@ -14,7 +14,7 @@ namespace SweetShopView
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для ингредиентиложения.
+        /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()

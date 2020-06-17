@@ -7,7 +7,7 @@ namespace SweetShopBusinessLogic.Enums
     public enum OrderStatus
     {
         принят = 0,
-        ВыИнгредиентлняется = 1,
+        Выпрлняется = 1,
         Готов = 2,
         Оплачен = 3
     }

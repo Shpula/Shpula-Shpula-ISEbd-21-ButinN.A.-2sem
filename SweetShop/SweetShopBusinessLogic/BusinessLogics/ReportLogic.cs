@@ -58,7 +58,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
         }
 
         /// <summary>
-        /// Сохранение комингредиентнент в файл-Word
+        /// Сохранение компрнент в файл-Word
         /// </summary>
         /// <param name="model"></param>
         public void SaveProductsToWordFile(ReportBindingModel model)
@@ -94,7 +94,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
             SaveToPdf.CreateDoc(new PDFInfo
             {
                 FileName = model.FileName,
-                Title = "Ингредиенты Продуктов ",
+                Title = "пры Продуктов ",
                 ProductIngredients = GetProductIngredients()
             });
         }

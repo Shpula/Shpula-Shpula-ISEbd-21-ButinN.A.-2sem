@@ -54,7 +54,7 @@ namespace SweetShopView
                         {
                             FileName = dialog.FileName,
                         });
-                        MessageBox.Show("Выингредиентлнено", "Успех", MessageBoxButtons.OK,
+                        MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
