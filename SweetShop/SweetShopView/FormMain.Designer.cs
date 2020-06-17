@@ -117,7 +117,7 @@
             // 
             this.orderDatesToolStripMenuItem.Name = "orderDatesToolStripMenuItem";
             this.orderDatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.orderDatesToolStripMenuItem.Text = "Заказы ингредиенты датам";
+            this.orderDatesToolStripMenuItem.Text = "Заказы по датам";
             this.orderDatesToolStripMenuItem.Click += new System.EventHandler(this.orderDatesToolStripMenuItem_Click);
             //           
             // dataGridView
@@ -152,7 +152,7 @@
             this.buttonTakeOrderInWork.Name = "buttonTakeOrderInWork";
             this.buttonTakeOrderInWork.Size = new System.Drawing.Size(141, 29);
             this.buttonTakeOrderInWork.TabIndex = 3;
-            this.buttonTakeOrderInWork.Text = "Отдать на выингредиентылнение";
+            this.buttonTakeOrderInWork.Text = "Отдать на выполнение";
             this.buttonTakeOrderInWork.UseVisualStyleBackColor = true;
             this.buttonTakeOrderInWork.Click += new System.EventHandler(this.buttonTakeOrderInWork_Click);
             // 
@@ -201,7 +201,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Магазин ингредиенты";
+            this.Text = "Магазин ингредиентов";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
