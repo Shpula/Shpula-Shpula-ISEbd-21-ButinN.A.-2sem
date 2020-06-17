@@ -258,6 +258,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReportProductIngredients.resx">
       <DependentUpon>FormReportProductIngredients.cs</DependentUpon>
     </EmbeddedResource>

@@ -147,7 +147,7 @@
             this.Controls.Add(this.dataGridView);
             this.Name = "FormReportOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Заказы Ингредиент датам";
+            this.Text = "Заказы по датам";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

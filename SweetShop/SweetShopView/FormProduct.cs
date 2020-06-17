@@ -146,7 +146,7 @@ namespace SweetShopView
             }
             if (ProductIngredients == null || ProductIngredients.Count == 0)
             {
-                MessageBox.Show("Заполните Ингредиенты", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните ингредиенты", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
