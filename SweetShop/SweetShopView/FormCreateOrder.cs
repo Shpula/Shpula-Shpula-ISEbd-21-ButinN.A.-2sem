@@ -75,7 +75,7 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxCount.Text))
             {
-                MessageBox.Show("Заингредиентылните ингредиентыле Количество", "Ошибка",
+                MessageBox.Show("Заполните поле Количество", "Ошибка",
                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
