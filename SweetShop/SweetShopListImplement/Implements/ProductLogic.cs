@@ -22,7 +22,7 @@ namespace SweetShopListImplement.Implements
             {
                 if (Product.ProductName == model.ProductName && Product.Id != model.Id)
                 {
-                    throw new Exception("Уже есть пакет с таким названием");
+                    throw new Exception("Уже есть продукт с таким названием");
                 }
                 if (!model.Id.HasValue && Product.Id >= tempProduct.Id)
                 {
