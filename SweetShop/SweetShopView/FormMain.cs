@@ -55,12 +55,12 @@ namespace SweetShopView
             LoadData();
         }
 
-        private void поToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ингредиентыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormIngredients>();
             form.ShowDialog();
         }
-        private void пакетыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void продуктыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormProducts>();
             form.ShowDialog();

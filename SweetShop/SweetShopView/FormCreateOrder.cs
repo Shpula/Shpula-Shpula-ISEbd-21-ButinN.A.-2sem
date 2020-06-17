@@ -79,7 +79,7 @@ namespace SweetShopView
             }
             if (comboBoxProduct.SelectedValue == null)
             {
-                MessageBox.Show("Выберите пакет", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Выберите продукт", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
