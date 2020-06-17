@@ -60,7 +60,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ингредиент</Value>
+                              <Value>поле</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -285,7 +285,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Ингредиенты Продуктов</Value>
+                <Value>полеы Продуктов</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                 </Style>

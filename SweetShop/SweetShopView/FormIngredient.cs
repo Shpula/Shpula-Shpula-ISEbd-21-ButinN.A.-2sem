@@ -49,7 +49,7 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxName.Text))
             {
-                MessageBox.Show("ЗаИнгредиентлните название", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Зполните название", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
@@ -60,7 +60,7 @@ namespace SweetShopView
                     Id = id,
                     IngredientName = textBoxName.Text
                 });
-                MessageBox.Show("Сохранение ингредиентошло успешно", "Сообщение",
+                MessageBox.Show("Сохранение прошло успешно", "Сообщение",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
                 Close();

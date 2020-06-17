@@ -74,7 +74,7 @@
             this.labelIngredient.Name = "labelIngredient";
             this.labelIngredient.Size = new System.Drawing.Size(53, 20);
             this.labelIngredient.TabIndex = 10;
-            this.labelIngredient.Text = "Ингредиент";
+            this.labelIngredient.Text = "поле";
             // 
             // labelSum
             // 

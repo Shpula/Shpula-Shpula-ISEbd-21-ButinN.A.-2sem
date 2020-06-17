@@ -27,7 +27,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 CreateRow(new PdfRowParameters
                 {
                     Table = table,
-                    Texts = new List<string> { "Продукт", "Ингредиент", "Количество" },
+                    Texts = new List<string> { "Продукт", "поле", "Количество" },
                     Style = "NormalTitle",
                     ParagraphAlignment = ParagraphAlignment.Center
                 });
