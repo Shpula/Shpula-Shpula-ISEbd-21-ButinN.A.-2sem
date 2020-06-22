@@ -33,7 +33,7 @@
             this.ингредиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.продуктыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.исингредиентлнителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.исполнителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сообщенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +69,7 @@
             this.ингредиентToolStripMenuItem,
             this.продуктыToolStripMenuItem,
             this.клиентыToolStripMenuItem,
-            this.исингредиентлнителиToolStripMenuItem,
+            this.исполнителиToolStripMenuItem,
             this.сообщенияToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
@@ -96,12 +96,12 @@
             this.клиентыToolStripMenuItem.Text = "Клиенты";
             this.клиентыToolStripMenuItem.Click += new System.EventHandler(this.клиентыToolStripMenuItem_Click);
             // 
-            // исингредиентлнителиToolStripMenuItem
+            // исполнителиToolStripMenuItem
             // 
-            this.исингредиентлнителиToolStripMenuItem.Name = "исингредиентлнителиToolStripMenuItem";
-            this.исингредиентлнителиToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.исингредиентлнителиToolStripMenuItem.Text = "Работяги";
-            this.исингредиентлнителиToolStripMenuItem.Click += new System.EventHandler(this.исингредиентлнителиToolStripMenuItem_Click);
+            this.исполнителиToolStripMenuItem.Name = "исполнителиToolStripMenuItem";
+            this.исполнителиToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.исполнителиToolStripMenuItem.Text = "Работяги";
+            this.исполнителиToolStripMenuItem.Click += new System.EventHandler(this.исполнителиToolStripMenuItem_Click);
             // 
             // сообщенияToolStripMenuItem
             // 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.ToolStripMenuItem ProductIngredientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderDatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem исингредиентлнителиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem исполнителиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запускРаботToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сообщенияToolStripMenuItem;
     }

@@ -69,7 +69,7 @@ namespace SweetShopView
             var form = Container.Resolve<FormProducts>();
             form.ShowDialog();
         }
-        private void исингредиентлнителиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void исполнителиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormImplementers>();
             form.ShowDialog();
