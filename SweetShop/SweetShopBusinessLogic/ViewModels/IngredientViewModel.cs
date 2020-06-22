@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
+using SweetShopBusinessLogic.Attributes;
 
 namespace SweetShopBusinessLogic.ViewModels
 {
 
-    public class IngredientViewModel
+    public class IngredientViewModel : BaseViewModel
     {
-        public int Id { get; set; }
-        [DisplayName("Название полеа")]
+        [Column(title: "Ингредиент", gridViewAutoSize: GridViewAutoSize.Fill)]
         public string IngredientName { get; set; }
+        public override List<string> Properties() => new List<string>
+        {
+            "Id",
+            "IngredientName"
+        };
     }
 }

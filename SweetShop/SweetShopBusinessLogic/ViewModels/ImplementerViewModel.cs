@@ -1,18 +1,25 @@
-﻿using System.ComponentModel;
-namespace SweetShopBusinessLogic.BindingModels
-{
-    /// <summary>
-    /// Исполнитель, выполняющий заказы
-    /// </summary>
-    public class ImplementerViewModel
-    {
+﻿using SweetShopBusinessLogic.Attributes;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Text;
 
-        public int Id { get; set; }
-        [DisplayName("ФИО исполнителя")]
+namespace SweetShopBusinessLogic.ViewModels
+{
+    public class ImplementerViewModel : BaseViewModel
+    {
+        [Column(title: "ФИО исполнителя", gridViewAutoSize: GridViewAutoSize.Fill)]
         public string ImplementerFIO { get; set; }
-        [DisplayName("Время на заказ")]
+        [Column(title: "Время на заказ", width: 100)]
         public int WorkingTime { get; set; }
-        [DisplayName("Время на перерыв")]
+        [Column(title: "Время на перерыв", width: 100)]
         public int PauseTime { get; set; }
+        public override List<string> Properties() => new List<string>
+        {
+            "Id",
+            "ImplementerFIO",
+            "WorkingTime",
+            "PauseTime"
+        };
     }
 }
