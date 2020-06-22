@@ -58,8 +58,7 @@ namespace SweetShopView
         {
             LoadData();
         }
-
-        private void ингредиентToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ингредиентыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormIngredients>();
             form.ShowDialog();
@@ -69,7 +68,7 @@ namespace SweetShopView
             var form = Container.Resolve<FormProducts>();
             form.ShowDialog();
         }
-        private void исингредиентлнителиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void исполнителиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormImplementers>();
             form.ShowDialog();
@@ -117,7 +116,7 @@ namespace SweetShopView
                     {
                         FileName = dialog.FileName
                     });
-                    MessageBox.Show("Выингредиентлнено", "Успех", MessageBoxButtons.OK,
+                    MessageBox.Show("Выполнено", "Успех", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
             }

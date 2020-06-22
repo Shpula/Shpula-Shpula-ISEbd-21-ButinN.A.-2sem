@@ -22,7 +22,7 @@ namespace SweetShopFileImplement.Implements
            == model.IngredientName && rec.Id != model.Id);
             if (element != null)
             {
-                throw new Exception("Уже есть Ингредиент с таким названием");
+                throw new Exception("Уже есть поле с таким названием");
             }
             if (model.Id.HasValue)
             {

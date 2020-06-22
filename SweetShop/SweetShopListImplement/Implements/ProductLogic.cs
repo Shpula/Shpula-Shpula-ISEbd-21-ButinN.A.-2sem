@@ -22,7 +22,7 @@ namespace SweetShopListImplement.Implements
             {
                 if (Product.ProductName == model.ProductName && Product.Id != model.Id)
                 {
-                    throw new Exception("Уже есть пакет с таким названием");
+                    throw new Exception("Уже есть продукт с таким названием");
                 }
                 if (!model.Id.HasValue && Product.Id >= tempProduct.Id)
                 {
@@ -48,7 +48,6 @@ namespace SweetShopListImplement.Implements
         }
         public void Delete(ProductBindingModel model)
         {
-            // удаляем записи Ингредиент Ингредиент ингредиенти удалении продукты
             for (int i = 0; i < source.ProductIngredients.Count; ++i)
             {
                 if (source.ProductIngredients[i].ProductId == model.Id)
@@ -70,7 +69,6 @@ namespace SweetShopListImplement.Implements
         {
             Product.ProductName = model.ProductName;
             Product.Price = model.Price;
-            //обновляем существуюущее Ингредиент и ищем максимальный идентификатор
             int maxPCId = 0;
             for (int i = 0; i < source.ProductIngredients.Count; ++i)
             {
@@ -80,7 +78,6 @@ namespace SweetShopListImplement.Implements
                 }
                 if (source.ProductIngredients[i].ProductId == Product.Id)
                 {
-                    // если в модели ингредиентишла запись Ингредиент с таким id
                     if
                     (model.ProductIngredients.ContainsKey(source.ProductIngredients[i].IngredientId))
                     {
@@ -88,7 +85,7 @@ namespace SweetShopListImplement.Implements
                         source.ProductIngredients[i].Count =
                         model.ProductIngredients[source.ProductIngredients[i].IngredientId].Item2;
                         model.ProductIngredients.Remove(source.ProductIngredients[i].ProductId);
-                        // из модели убираем эту запись, чтобы остались только не ингредиентосмотренные
+                        // из модели убираем эту запись, чтобы остались только не просмотренные
                     }
                     else
                     {
