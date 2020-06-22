@@ -110,7 +110,7 @@ namespace SweetShopView
         {
             if (dataGridView.SelectedRows.Count == 1)
             {
-                if (MessageBox.Show("Удалить запись", "Воингредиентос", MessageBoxButtons.YesNo,
+                if (MessageBox.Show("Удалить запись", "Вопрос", MessageBoxButtons.YesNo,
                MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
@@ -134,19 +134,19 @@ namespace SweetShopView
         {
             if (string.IsNullOrEmpty(textBoxName.Text))
             {
-                MessageBox.Show("ЗаИнгредиентлните название", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните название", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrEmpty(textBoxPrice.Text))
             {
-                MessageBox.Show("ЗаИнгредиентлните цену", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните цену", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
             if (ProductIngredients == null || ProductIngredients.Count == 0)
             {
-                MessageBox.Show("ЗаИнгредиентлните Ингредиент", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Заполните поле", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
@@ -159,7 +159,7 @@ namespace SweetShopView
                     Price = Convert.ToDecimal(textBoxPrice.Text),
                     ProductIngredients = ProductIngredients
                 });
-                MessageBox.Show("Сохранение ингредиентошло успешно", "Сообщение",
+                MessageBox.Show("Сохранение прошло успешно", "Сообщение",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
                 Close();

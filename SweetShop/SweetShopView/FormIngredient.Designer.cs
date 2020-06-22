@@ -80,7 +80,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
             this.Name = "FormIngredient";
-            this.Text = "Ингредиент";
+            this.Text = "поле";
             this.Load += new System.EventHandler(this.FormIngredient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

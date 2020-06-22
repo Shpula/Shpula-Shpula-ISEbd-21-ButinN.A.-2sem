@@ -111,7 +111,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Ингредиент";
+            this.label2.Text = "поле";
             // 
             // buttonMake
             // 
@@ -147,7 +147,7 @@
             this.Controls.Add(this.dataGridView);
             this.Name = "FormReportOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Заказы Ингредиент датам";
+            this.Text = "Заказы по датам";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

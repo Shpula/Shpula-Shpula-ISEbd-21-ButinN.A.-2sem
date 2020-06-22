@@ -67,7 +67,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
             SaveToWord.CreateDoc(new WordInfo
             {
                 FileName = model.FileName,
-                Title = "Список пакетов",
+                Title = "Список продуктов",
                 Products = packLogic.Read(null)
             });
         }
@@ -96,8 +96,9 @@ namespace SweetShopBusinessLogic.BusinessLogics
             SaveToPdf.CreateDoc(new PDFInfo
             {
                 FileName = model.FileName,
-                Title = "Детализация пакетов ",
+                Title = "Детализация продуктов ",
                 ProductIngredients = GetProductIngredient()
+
             });
         }
     }
