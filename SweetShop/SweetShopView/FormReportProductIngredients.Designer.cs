@@ -101,7 +101,6 @@
             this.Name = "FormReportProductIngredients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Детали Продуктов";
-            this.Load += new System.EventHandler(this.FormReportProductIngredients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReportProductIngredientViewModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
