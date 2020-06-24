@@ -20,11 +20,13 @@ namespace SweetShopView
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly IProductLogic logicB;
+        private readonly IClientLogic logicC;
         private readonly MainLogic logicM;
-        public FormCreateOrder(IProductLogic logicB, MainLogic logicM)
+        public FormCreateOrder(IProductLogic logicB, IClientLogic logicC, MainLogic logicM)
         {
             InitializeComponent();
             this.logicB = logicB;
+            this.logicC = logicC;
             this.logicM = logicM;
         }
         private void FormCreateOrder_Load(object sender, EventArgs e)
@@ -35,6 +37,12 @@ namespace SweetShopView
                 comboBoxProduct.DataSource = list;
                 comboBoxProduct.DisplayMember = "ProductName";
                 comboBoxProduct.ValueMember = "Id";
+
+                var listC = logicC.Read(null);
+                comboBoxClient.DisplayMember = "ClientFIO";
+                comboBoxClient.ValueMember = "Id";
+                comboBoxClient.DataSource = listC;
+                comboBoxClient.SelectedItem = null;
             }
             catch (Exception ex)
             {
@@ -79,7 +87,7 @@ namespace SweetShopView
             }
             if (comboBoxProduct.SelectedValue == null)
             {
-                MessageBox.Show("Выберите продукт", "Ошибка", MessageBoxButtons.OK,
+                MessageBox.Show("Выберите пакет", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
@@ -88,6 +96,7 @@ namespace SweetShopView
                 logicM.CreateOrder(new CreateOrderBindingModel
                 {
                     ProductId = Convert.ToInt32(comboBoxProduct.SelectedValue),
+                    ClientId = Convert.ToInt32(comboBoxClient.SelectedValue),
                     Count = Convert.ToInt32(textBoxCount.Text),
                     Sum = Convert.ToDecimal(textBoxSum.Text)
                 });

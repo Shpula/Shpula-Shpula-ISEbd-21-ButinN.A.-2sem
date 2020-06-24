@@ -74,7 +74,7 @@ namespace SweetShopView
             // 
             // ColumnIngredient
             // 
-            this.ColumnIngredient.HeaderText = "поле";
+            this.ColumnIngredient.HeaderText = "Ингредиенты";
             this.ColumnIngredient.Name = "ColumnIngredient";
             // 
             // Count
@@ -134,7 +134,7 @@ namespace SweetShopView
             this.labelIngredient.Name = "labelIngredient";
             this.labelIngredient.Size = new System.Drawing.Size(29, 17);
             this.labelIngredient.TabIndex = 7;
-            this.labelIngredient.Text = "поле";
+            this.labelIngredient.Text = "Ингредиенты";
             // 
             // buttonCancel
             // 
@@ -211,7 +211,7 @@ namespace SweetShopView
             this.Controls.Add(this.dataGridView);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormProduct";
-            this.Text = "поле";
+            this.Text = "Ингредиенты";
             this.Load += new System.EventHandler(this.FormProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
