@@ -65,10 +65,5 @@ namespace SweetShopView
                 }
             }
         }
-
-        private void FormReportProductIngredients_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

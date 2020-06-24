@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using SweetShopBusinessLogic.BindingModels;
+﻿using SweetShopBusinessLogic.BindingModels;
 using SweetShopBusinessLogic.Interfaces;
 using SweetShopBusinessLogic.ViewModels;
 using SweetShopDatabaseImplement.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SweetShopDatabaseImplement.Implements
 {
@@ -19,8 +19,7 @@ namespace SweetShopDatabaseImplement.Implements
                 Order element;
                 if (model.Id.HasValue)
                 {
-                    element = context.Orders.FirstOrDefault(rec => rec.Id ==
-                   model.Id);
+                    element = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
                     if (element == null)
                     {
                         throw new Exception("Элемент не найден");
@@ -40,56 +39,37 @@ namespace SweetShopDatabaseImplement.Implements
                 context.SaveChanges();
             }
         }
-
         public void Delete(OrderBindingModel model)
         {
             using (var context = new SweetShopDatabase())
             {
-                using (var transaction = context.Database.BeginTransaction())
+                Order element = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
+                if (element != null)
                 {
-                    try
-                    {
-                        Order order = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
-                        if (order != null)
-                        {
-                            context.Orders.Remove(order);
-                        }
-                        else
-                        {
-                            throw new Exception("Элемент не найден");
-                        }
-                        context.SaveChanges();
-                        transaction.Commit();
-                    }
-                    catch (Exception)
-                    {
-                        transaction.Rollback();
-                        throw;
-                    }
+                    context.Orders.Remove(element);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("Элемент не найден");
                 }
             }
         }
-
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             using (var context = new SweetShopDatabase())
-            {
-                return context.Orders.Where(rec => model == null ||
-                     (rec.Id == model.Id && model.Id.HasValue) ||
-                     (model.DateFrom.HasValue && model.DateTo.HasValue &&
-                     (rec.DateCreate >= model.DateFrom) && (rec.DateCreate <= model.DateTo))).ToList().Select(rec => new OrderViewModel()
-                 {
-                         Id = rec.Id,
-                         ProductId = rec.ProductId,
-                         ProductName = context.Products.FirstOrDefault((r) => r.Id == rec.ProductId).ProductName,
-                         Count = rec.Count,
-                         DateCreate = rec.DateCreate,
-                         DateImplement = rec.DateImplement,
-                         Status = rec.Status,
-                         Sum = rec.Sum
-                     })
-            .ToList();
+                return context.Orders.Where(
+                        rec => model == null || (rec.Id == model.Id && model.Id.HasValue) || (model.DateFrom.HasValue && model.DateTo.HasValue && rec.DateCreate >= model.DateFrom && rec.DateCreate <= model.DateTo)).Select(rec => new OrderViewModel
+                        {
+                            Id = rec.Id,
+                            ProductId = rec.ProductId,
+                            DateCreate = rec.DateCreate,
+                            DateImplement = rec.DateImplement,
+                            Status = rec.Status,
+                            Count = rec.Count,
+                            Sum = rec.Sum,
+                            ProductName = rec.Product.ProductName
+                        }).ToList();
             }
         }
     }
-}
