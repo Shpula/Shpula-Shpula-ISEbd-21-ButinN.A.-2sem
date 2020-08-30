@@ -60,7 +60,6 @@ namespace SweetShopBusinessLogic.BusinessLogics
                     DateImplement = DateTime.Now,
                     Status = OrderStatus.Выполняется
                 });
-            }
         }
 
         public void FinishOrder(ChangeStatusBindingModel model)
