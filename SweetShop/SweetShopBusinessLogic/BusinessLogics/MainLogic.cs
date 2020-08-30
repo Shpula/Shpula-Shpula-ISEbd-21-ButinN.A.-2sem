@@ -72,6 +72,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                     DateImplement = DateTime.Now,
                     Status = OrderStatus.Выполняется
                 });
+              
                 MailLogic.MailSendAsync(new MailSendInfo
                 {
                     MailAddress = clientLogic.Read(new ClientBindingModel
