@@ -50,6 +50,7 @@ namespace SweetShopBusinessLogic.BusinessLogics
                 Sum = order.Sum,
                 DateCreate = order.DateCreate,
                 DateImplement = DateTime.Now,
+
                 Status = OrderStatus.Выполняется
             });
         }

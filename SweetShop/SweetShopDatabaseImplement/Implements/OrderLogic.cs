@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using SweetShopBusinessLogic.BindingModels;
+﻿using SweetShopBusinessLogic.BindingModels;
 using SweetShopBusinessLogic.Interfaces;
 using SweetShopBusinessLogic.ViewModels;
 using SweetShopDatabaseImplement.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SweetShopDatabaseImplement.Implements
 {
@@ -19,8 +19,7 @@ namespace SweetShopDatabaseImplement.Implements
                 Order element;
                 if (model.Id.HasValue)
                 {
-                    element = context.Orders.FirstOrDefault(rec => rec.Id ==
-                   model.Id);
+                    element = context.Orders.FirstOrDefault(rec => rec.Id == model.Id);
                     if (element == null)
                     {
                         throw new Exception("Элемент не найден");
@@ -41,7 +40,6 @@ namespace SweetShopDatabaseImplement.Implements
                 context.SaveChanges();
             }
         }
-
         public void Delete(OrderBindingModel model)
         {
             using (var context = new SweetShopDatabase())
@@ -58,7 +56,6 @@ namespace SweetShopDatabaseImplement.Implements
                 }
             }
         }
-
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             using (var context = new SweetShopDatabase())
@@ -85,4 +82,3 @@ namespace SweetShopDatabaseImplement.Implements
             }
         }
     }
-}
